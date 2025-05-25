@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Tandoori Chicken",
+    "price_CAD": 16.99,
+    "rating": 4.5,
+    "ingredients": "Chicken (bone-in), yogurt, ginger-garlic paste, red chili powder, garam masala, lemon juice, mustard oil"
+  },
+  {
+    "name": "Paneer Tikka (Tandoori)",
+    "price_CAD": 14.99,
+    "rating": 4.4,
+    "ingredients": "Paneer cubes, yogurt, turmeric, red chili, chaat masala, bell peppers, onions"
+  },
+  {
+    "name": "Butter Chicken",
+    "price_CAD": 14.99,
+    "rating": 4.7,
+    "ingredients": "Chicken, butter, cream, tomatoes, cashew paste, ginger-garlic, fenugreek leaves, spices"
+  },
+  {
+    "name": "Masala Dosa",
+    "price_CAD": 10.99,
+    "rating": 4.3,
+    "ingredients": "Fermented rice and urad dal batter, mashed spiced potatoes, mustard seeds, curry leaves"
+  },
+  {
+    "name": "Biryani (Hyderabadi Mutton)",
+    "price_CAD": 12.99,
+    "rating": 4.6,
+    "ingredients": "Basmati rice, marinated mutton, saffron, fried onions, mint, yogurt, garam masala"
+  },
+  {
+    "name": "Chole Bhature",
+    "price_CAD": 10.99,
+    "rating": 4.2,
+    "ingredients": "Chickpeas, tomatoes, onions, ginger, spices, bhature (fried bread)"
+  },
+  {
+    "name": "Rogan Josh",
+    "price_CAD": 8.49,
+    "rating": 4.5,
+    "ingredients": "Lamb, yogurt, Kashmiri red chili, fennel seeds, dry ginger, cardamom, cinnamon"
+  },
+  {
+    "name": "Palak Paneer",
+    "price_CAD": 7.99,
+    "rating": 4.4,
+    "ingredients": "Spinach puree, paneer cubes, garlic, green chilies, cream, cumin, garam masala"
+  }
+]
