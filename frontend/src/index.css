@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+
+*{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: outfit, sans-serif;
+}
