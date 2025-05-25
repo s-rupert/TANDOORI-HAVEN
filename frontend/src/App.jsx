@@ -53,6 +53,9 @@ function App() {
           <p className="text-4xl text-yellow-700 font-semibold h-15">This Month's <span className="text-red-700 font-bold">HOT</span> Choice</p>
           <img className="w-[35%] -mt-10" src="/Lright.png" alt="Line Right" />
         </div>
+        <div>
+          
+        </div>
       </div>
     </div>
   );
