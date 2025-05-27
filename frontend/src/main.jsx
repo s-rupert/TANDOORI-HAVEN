@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+// main.jsx or App.jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import { PageProvider } from './components/PageContext';
+import './index.css';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <PageProvider>
+      <App />
+    </PageProvider>
+  </React.StrictMode>
+);

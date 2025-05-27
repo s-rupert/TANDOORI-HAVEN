@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import react, { useEffect, useState, useContext } from "react";
 import {
   UserRound,
   ShoppingCart,
@@ -13,56 +13,20 @@ import {
 } from "lucide-react";
 import data from "./JSON/MonthPick.json";
 import Menupage from "./pages/Menupage";
+import Locationpage from "./pages/Locationpage";
+import { PageContext } from "./components/PageContext";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [menubtn, setMenubtn] = useState(false);
-  const [location, setLocation] = useState(false);
-  const [reservation, setReservation] = useState(false);
-  const [about, setAbout] = useState(false);
-  const [contact, setContact] = useState(false);
+  const {
+    menubtn, setMenubtn,
+    location, setLocation,
+    reservation, setReservation,
+    about, setAbout,
+    contact, setContact, homePage, setHomePage, menuHandler
+  } = useContext(PageContext);
 
-  const menuHandler = (num) => {
-    switch (num) {
-      case 0:
-        setMenubtn(!menuOpen);
-        setLocation(false);
-        setReservation(false);
-        setAbout(false);
-        setContact(false);
-        break;
-      case 1:
-        setLocation(!location);
-        setMenubtn(false);
-        setReservation(false);
-        setAbout(false);
-        setContact(false);
-        break;
-      case 2:
-        setReservation(!reservation);
-        setMenubtn(false);
-        setLocation(false);
-        setAbout(false);
-        setContact(false);
-        break;
-      case 3:
-        setAbout(!about);
-        setMenubtn(false);
-        setLocation(false);
-        setReservation(false);
-        setContact(false);
-        break;
-      case 4:
-        setContact(!contact);
-        setMenubtn(false);
-        setLocation(false);
-        setReservation(false);
-        setAbout(false);
-        break;
-      default:
-        break;
-    }
-  };
+  
 
   return (
     <div className="bg-amber-50 h-screen w-screen relative overflow-x-hidden">
@@ -146,7 +110,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="hidden">
+      <div className={`${homePage ? "block" : "hidden"}`}>
         <img
           className="absolute -top-10 opacity-50 left-20 w-[22vw] md:left-[20vw]  z-1 xl:w-[15vw]"
           src="/1.png"
@@ -349,16 +313,16 @@ function App() {
           </div>
         </div>
       </div>
-      {/* menu page */}
       <Menupage />
-      {/* Footer */}
+      <Locationpage />
+      {/* Footer */}  
       <div className="bg-yellow-700 text-white flex justify-between mt-10 p-5 gap-5 xl:px-20">
         <div className="flex flex-col items-center gap-2 lg:gap-3">
           <p className="font-bold text-lg">Locations</p>
           <p className="underline">Brampton</p>
-          <p className="underline">Brampton</p>
-          <p className="underline">North York</p>
-          <p className="underline">Toronto</p>
+          <p className="underline">Mississauga</p>
+          <p className="underline">Scarborough</p>
+          <p className="underline">Oakville</p>
         </div>
         <div className="flex flex-col text-center gap-1 lg:gap-2">
           <p className="font-bold text-lg">Overview</p>
@@ -372,7 +336,7 @@ function App() {
           <p className="font-bold text-xl">Contact</p>
           <p className="underline">Restaurant Desk</p>
           <p>+1 (123) 345 6789</p>
-          <p className="font-bold">tandoorihaven@thmail.com</p>
+          <p className="font-bold">info@tandoorihaven.com</p>
           <p>Subscibe us for future updates and events </p>
           <button className="w-30 px-3 py-2 rounded-lg bg-red-700 text-white ml-20 hover:bg-red-500">
             Subscribe
