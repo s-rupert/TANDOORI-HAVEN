@@ -6,3 +6,9 @@
     /* overflow-x:hidden; */
     font-family: outfit, sans-serif;
 }
+body {
+  -webkit-user-select: none;  /* Chrome, Safari */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* IE10+/Edge */
+  user-select: none;          /* Standard */
+}

@@ -10,6 +10,7 @@ export const PageProvider = ({ children }) => {
   const [about, setAbout] = useState(false);
   const [contact, setContact] = useState(false);
   const [homePage, setHomePage] = useState(true);
+  const [userbtn, setUserbtn] = useState(false)
 
   const menuHandler = (num) => {
     switch (num) {
@@ -93,7 +94,10 @@ export const PageProvider = ({ children }) => {
         setContact,
         menuHandler,
         homePage,
-        setHomePage
+        setHomePage,
+        userbtn,
+        setUserbtn,
+
       }}
     >
       {children}

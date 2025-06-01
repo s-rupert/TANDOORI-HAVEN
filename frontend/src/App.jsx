@@ -10,11 +10,16 @@ import {
   Instagram,
   Menu,
   X,
+  Contact,
 } from "lucide-react";
 import data from "./JSON/MonthPick.json";
 import Menupage from "./pages/Menupage";
 import Locationpage from "./pages/Locationpage";
 import { PageContext } from "./components/PageContext";
+import ReservationPage from "./pages/Reservationpage";
+import AboutPage from "./pages/Aboutpage";
+import ContactPage from "./pages/Contactpage";
+import Userpage from "./pages/Userpage";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,7 +28,7 @@ function App() {
     location, setLocation,
     reservation, setReservation,
     about, setAbout,
-    contact, setContact, homePage, setHomePage, menuHandler
+    contact, setContact, homePage, setHomePage, menuHandler, userbtn, setUserbtn
   } = useContext(PageContext);
 
   
@@ -51,7 +56,7 @@ function App() {
           }`}
         >
           <div
-            className="absolute top-2 left-2"
+            className="absolute top-2 left-2 md:hidden"
             onClick={() => setMenuOpen(false)}
           >
             <X size={30} />
@@ -98,7 +103,7 @@ function App() {
           </div>
           <div
             className="text-white rounded-full flex items-center h-[7vw] text-lg md:text-xs md:text-yellow-700 md:h-[3vw] lg:text-sm xl:h-[2vw]"
-            onClick={() => {}}
+            onClick={() => {setUserbtn(true)}}
           >
             <UserRound />
           </div>
@@ -137,8 +142,8 @@ function App() {
           alt=""
         />
         {/* Hero Section */}
-        <div className="flex flex-col-reverse justify-between w-screen relative z-2 md:flex-row md:items-center md:gap-10">
-          <div className="flex flex-col w-[70%] h-auto pl-5 -mt-10 md:w-[60%] md:pl-10 md:mt-0 xl:w-[50%]">
+        <div className="flex flex-col-reverse justify-between w-screen relative z-2 md:flex-row md:items-center md:gap-10 lg:-mt-15">
+          <div className="flex flex-col w-[70%] h-auto pl-5 -mt-10 md:w-[60%] md:pl-10 md:mt-0 xl:w-[60%]">
             <p className="font-bold text-yellow-600 h-[9vw] text-2xl sm:text-4xl md:text-3xl md:h-[6vw] lg:text-5xl xl:text-6xl">
               Tandoori Crafted With
             </p>
@@ -152,7 +157,7 @@ function App() {
             </p>
           </div>
           <img
-            className="w-[70%] ml-40 h-auto pr-10 md:w-[40%] md:ml-0 md:pr-0 xl:w-[50%] xl:mr-10"
+            className="w-[70%] ml-40 h-auto pr-10 md:w-[40%] md:ml-0 md:pr-0 xl:w-[40%] xl:mr-10"
             src="/ModelImg.png"
             alt="Model"
           />
@@ -253,8 +258,7 @@ function App() {
             alt="Line Left"
           />
           <p className="text-lg text-yellow-700 font-semibold h-15 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
-            This Month's <span className="text-red-700 font-bold">HOT</span>{" "}
-            Choice
+            Reservation Options
           </p>
           <img
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
@@ -313,9 +317,13 @@ function App() {
           </div>
         </div>
       </div>
+      <Userpage />
       <Menupage />
       <Locationpage />
-      {/* Footer */}  
+      <ReservationPage />
+      <AboutPage />
+      <ContactPage />
+      {/* Footer */}
       <div className="bg-yellow-700 text-white flex justify-between mt-10 p-5 gap-5 xl:px-20">
         <div className="flex flex-col items-center gap-2 lg:gap-3">
           <p className="font-bold text-lg">Locations</p>

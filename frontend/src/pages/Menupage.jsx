@@ -14,7 +14,8 @@ function Menupage() {
         more. We are dedicated to ensuring top-quality food and excellent
         service.
       </p>
-      <img
+      <div>
+        <img
           className="absolute -top-10 opacity-50 left-30 w-[22vw] md:left-[20vw]  z-1 xl:w-[15vw]"
           src="/6.png"
           alt=""
@@ -29,6 +30,7 @@ function Menupage() {
           src="/8.png"
           alt=""
         />
+      </div>
       {/* full meals  */}
       <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
         <img
