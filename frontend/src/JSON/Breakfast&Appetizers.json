@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Samosa",
+    "price": 3.50,
+    "rating": 4.7,
+    "ingredients": "Potatoes, peas, spices, wheat flour",
+    "image": "/foodimg/samosa.jpg"
+  },
+  {
+    "name": "Paneer Tikka",
+    "price": 8.00,
+    "rating": 4.6,
+    "ingredients": "Paneer, yogurt, spices, bell peppers, onions",
+    "image": "/foodimg/paneer_tikka.jpg"
+  },
+  {
+    "name": "Pani Puri",
+    "price": 4.00,
+    "rating": 4.8,
+    "ingredients": "Semolina puris, tamarind water, chickpeas, potatoes",
+    "image": "/foodimg/pani_puri.jpg"
+  },
+  {
+    "name": "Aloo Tikki",
+    "price": 3.80,
+    "rating": 4.5,
+    "ingredients": "Potatoes, peas, spices, breadcrumbs",
+    "image": "/foodimg/aloo_tikki.jpg"
+  },
+  {
+    "name": "Papdi Chaat",
+    "price": 5.00,
+    "rating": 4.6,
+    "ingredients": "Crispy wafers, yogurt, tamarind chutney, chickpeas",
+    "image": "/foodimg/papdi_chaat.jpg"
+  },
+  {
+    "name": "Dahi Puri",
+    "price": 4.20,
+    "rating": 4.7,
+    "ingredients": "Puri, yogurt, chutneys, spices",
+    "image": "/foodimg/dahi_puri.jpg"
+  },
+  {
+    "name": "Vada Pav",
+    "price": 3.00,
+    "rating": 4.5,
+    "ingredients": "Potato fritter, pav bread, chutneys",
+    "image": "/foodimg/vada_pav.jpg"
+  },
+  {
+    "name": "Bhel Puri",
+    "price": 4.50,
+    "rating": 4.7,
+    "ingredients": "Puffed rice, sev, onions, tomatoes, tamarind chutney",
+    "image": "/foodimg/bhel_puri.jpg"
+  },
+  {
+    "name": "Kachori",
+    "price": 3.70,
+    "rating": 4.4,
+    "ingredients": "Flour shell, spiced lentil filling",
+    "image": "/foodimg/kachori.jpg"
+  },
+  {
+    "name": "Sev Puri",
+    "price": 4.30,
+    "rating": 4.6,
+    "ingredients": "Puri, sev, potatoes, chutneys, onions",
+    "image": "/foodimg/sev_puri.jpg"
+  },
+  {
+    "name": "Onion Pakora",
+    "price": 3.80,
+    "rating": 4.5,
+    "ingredients": "Onions, gram flour, spices",
+    "image": "/foodimg/onion_pakora.jpg"
+  },
+  {
+    "name": "Chicken Tikka",
+    "price": 9.50,
+    "rating": 4.7,
+    "ingredients": "Chicken, yogurt, spices, lemon juice",
+    "image": "/foodimg/chicken_tikka.jpg"
+  },
+  {
+    "name": "Pav Bhaji",
+    "price": 6.00,
+    "rating": 4.7,
+    "ingredients": "Mixed vegetable mash, pav bread, butter, spices",
+    "image": "/foodimg/pav_bhaji.jpg"
+  },
+  {
+    "name": "Paneer Pakora",
+    "price": 5.00,
+    "rating": 4.5,
+    "ingredients": "Paneer, gram flour batter, spices",
+    "image": "/foodimg/paneer_pakora.jpg"
+  },
+  {
+    "name": "Fish Amritsari",
+    "price": 10.00,
+    "rating": 4.6,
+    "ingredients": "Fish fillets, gram flour, spices, lemon",
+    "image": "/foodimg/fish_amritsari.jpg"
+  },
+  {
+    "name": "Masala Puri",
+    "price": 5.00,
+    "rating": 4.4,
+    "ingredients": "Crispy puri, spicy peas, chutneys",
+    "image": "/foodimg/masala_puri.jpg"
+  },
+  {
+    "name": "Chili Paneer",
+    "price": 8.50,
+    "rating": 4.7,
+    "ingredients": "Paneer, bell peppers, chili sauce, soy sauce",
+    "image": "/foodimg/chili_paneer.jpg"
+  },
+  {
+    "name": "Idli Fry",
+    "price": 4.50,
+    "rating": 4.3,
+    "ingredients": "Steamed idli, spices, gram flour batter",
+    "image": "/foodimg/idli_fry.jpg"
+  },
+  {
+    "name": "Gobi Manchurian",
+    "price": 7.00,
+    "rating": 4.6,
+    "ingredients": "Cauliflower, soy sauce, garlic, green chilies",
+    "image": "/foodimg/gobi_manchurian.jpg"
+  },
+  {
+    "name": "Momos",
+    "price": 6.50,
+    "rating": 4.7,
+    "ingredients": "Flour dough, cabbage, carrots, spices",
+    "image": "/foodimg/momos.jpg"
+  },
+  {
+    "name": "Tandoori Chicken",
+    "price": 11.00,
+    "rating": 4.8,
+    "ingredients": "Chicken, yogurt, tandoori masala, lemon",
+    "image": "/foodimg/tandoori_chicken.jpg"
+  },
+  {
+    "name": "Pesarattu",
+    "price": 5.00,
+    "rating": 4.2,
+    "ingredients": "Green gram, ginger, green chilies",
+    "image": "/foodimg/pesarattu.jpg"
+  },
+  {
+    "name": "Chicken 65",
+    "price": 9.00,
+    "rating": 4.5,
+    "ingredients": "Chicken, red chili powder, curry leaves, yogurt",
+    "image": "/foodimg/chicken_65.jpg"
+  },
+  {
+    "name": "Cutlet",
+    "price": 4.50,
+    "rating": 4.4,
+    "ingredients": "Potatoes, vegetables, spices, bread crumbs",
+    "image": "/foodimg/cutlet.jpg"
+  },
+  {
+    "name": "Batata Vada",
+    "price": 3.50,
+    "rating": 4.5,
+    "ingredients": "Potato filling, gram flour batter, spices",
+    "image": "/foodimg/batata_vada.jpg"
+  }
+]
