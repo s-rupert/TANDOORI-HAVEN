@@ -1,8 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import { PageContext } from "../components/PageContext";
 
 const ReservationPage = () => {
-  const { reservation, setReservation } = useContext(PageContext);
+  const {
+    reservation,
+    setReservation,
+    tablebookRef,
+    cateringRef,
+    dailylunchRef,
+    scrollTo,
+    setScrollTo,
+  } = useContext(PageContext);
+
+  useEffect(() => {
+  if (scrollTo === 1) {
+    tablebookRef.current?.scrollIntoView({ behavior: "smooth" });
+  } else if (scrollTo === 2) {
+    cateringRef.current?.scrollIntoView({ behavior: "smooth" });
+  } else if (scrollTo === 3) {
+    dailylunchRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+}, [scrollTo]);
+
 
   return (
     <div className={`m-2 ${reservation ? "block" : "hidden"}`}>
@@ -16,17 +35,17 @@ const ReservationPage = () => {
         ease, just let us know your needs, and we'll take care of the rest.
       </p>
       <div>
-        <img
+        <img loading="lazy"
           className="absolute -top-10 opacity-50 left-30 w-[22vw] md:left-[20vw]  z-1 xl:w-[15vw]"
           src="/12.png"
           alt=""
         />
-        <img
+        <img loading="lazy"
           className="absolute opacity-50 top-15 right-20 w-[20vw] z-1 xl:w-[10vw]"
           src="/13.png"
           alt=""
         />
-        <img
+        <img loading="lazy"
           className="absolute opacity-50 top-[50vw] w-[15vw] z-1 md:top-[15vw] xl:w-[10vw]  xl:top-[15vw]"
           src="/14.png"
           alt=""
@@ -34,9 +53,9 @@ const ReservationPage = () => {
       </div>
       <div className="flex flex-col justify-center mt-10 ">
         {/* table reservation form */}
-        <div className="flex flex-col justify-center">
+        <div ref={tablebookRef} className="flex flex-col justify-center">
           <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
-            <img
+            <img loading="lazy"
               className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
               src="/Lleft.png"
               alt="Line Left"
@@ -44,7 +63,7 @@ const ReservationPage = () => {
             <p className="text-lg text-yellow-700 font-semibold h-15 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
               Table Reservation
             </p>
-            <img
+            <img loading="lazy"
               className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
               src="/Lright.png"
               alt="Line Right"
@@ -121,22 +140,22 @@ const ReservationPage = () => {
               />
             </div>
           </div>
-            <div className="flex w-full justify-center items-center">
+          <div className="flex w-full justify-center items-center">
             <button className="w-auto inline-block bg-yellow-700 text-white px-6 py-2 rounded-lg hover:bg-yellow-500 transition duration-300">
               Reserve Now
             </button>
-            </div>
-            <div className="text-center font-bold mt-3">Need Help →</div>
-            <p className="text-center text-sm">
-              Note: We will contact you shortly if there are any issues,
-              otherwise, you will receive a confirmation message on your phone
-              number.
-            </p>
+          </div>
+          <div className="text-center font-bold mt-3">Need Help →</div>
+          <p className="text-center text-sm">
+            Note: We will contact you shortly if there are any issues,
+            otherwise, you will receive a confirmation message on your phone
+            number.
+          </p>
         </div>
         {/* Catering for Gathering */}
-        <div className="flex flex-col justify-center">
+        <div ref={cateringRef} className="flex flex-col justify-center">
           <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
-            <img
+            <img loading="lazy"
               className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
               src="/Lleft.png"
               alt="Line Left"
@@ -144,7 +163,7 @@ const ReservationPage = () => {
             <p className="text-lg text-yellow-700 font-semibold h-15 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
               Catering for Gatherings
             </p>
-            <img
+            <img loading="lazy"
               className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
               src="/Lright.png"
               alt="Line Right"
@@ -225,7 +244,7 @@ const ReservationPage = () => {
             <button className="w-auto inline-block bg-yellow-700 text-white px-6 py-2 rounded-lg hover:bg-yellow-500 transition duration-300">
               Reserve Now
             </button>
-            </div>
+          </div>
           <div className="text-center font-bold mt-3">Need Help →</div>
           <p className="text-center text-sm">
             Note: We will contact you shortly for more information and food
@@ -234,9 +253,9 @@ const ReservationPage = () => {
           </p>
         </div>
         {/* Daily lunches */}
-        <div className="flex flex-col justify-center">
+        <div ref={dailylunchRef} className="flex flex-col justify-center">
           <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
-            <img
+            <img loading="lazy"
               className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
               src="/Lleft.png"
               alt="Line Left"
@@ -244,7 +263,7 @@ const ReservationPage = () => {
             <p className="text-lg text-yellow-700 font-semibold h-15 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
               Daily Lunches
             </p>
-            <img
+            <img loading="lazy"
               className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
               src="/Lright.png"
               alt="Line Right"
@@ -324,7 +343,7 @@ const ReservationPage = () => {
             <button className="w-auto inline-block bg-yellow-700 text-white px-6 py-2 rounded-lg hover:bg-yellow-500 transition duration-300">
               Reserve Now
             </button>
-            </div>
+          </div>
           <div className="text-center font-bold mt-3">Need Help →</div>
           <p className="text-center text-sm">
             Note: We will contact you shortly for more information and food

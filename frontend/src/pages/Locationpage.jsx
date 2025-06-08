@@ -16,16 +16,19 @@ const LocationPage = () => {
       </p>
       <div>
         <img
+          loading="lazy"
           className="absolute -top-10 opacity-50 left-30 w-[22vw] md:left-[20vw]  z-1 xl:w-[15vw]"
           src="/9.png"
           alt=""
         />
         <img
+          loading="lazy"
           className="absolute opacity-50 top-15 right-20 w-[20vw] z-1 xl:w-[10vw]"
           src="/10.png"
           alt=""
         />
         <img
+          loading="lazy"
           className="absolute opacity-50 top-[50vw] w-[15vw] z-1 md:top-[15vw] xl:w-[10vw]  xl:top-[15vw]"
           src="/11.png"
           alt=""
@@ -35,6 +38,7 @@ const LocationPage = () => {
       <div>
         <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
           <img
+            loading="lazy"
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
             src="/Lleft.png"
             alt="Line Left"
@@ -43,6 +47,7 @@ const LocationPage = () => {
             Brampton Branch
           </p>
           <img
+            loading="lazy"
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
             src="/Lright.png"
             alt="Line Right"
@@ -82,6 +87,7 @@ const LocationPage = () => {
       <div>
         <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
           <img
+            loading="lazy"
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
             src="/Lleft.png"
             alt="Line Left"
@@ -90,6 +96,7 @@ const LocationPage = () => {
             Mississauga Branch
           </p>
           <img
+            loading="lazy"
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
             src="/Lright.png"
             alt="Line Right"
@@ -129,6 +136,7 @@ const LocationPage = () => {
       <div>
         <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
           <img
+            loading="lazy"
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
             src="/Lleft.png"
             alt="Line Left"
@@ -137,6 +145,7 @@ const LocationPage = () => {
             Scarborough Branch
           </p>
           <img
+            loading="lazy"
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
             src="/Lright.png"
             alt="Line Right"
@@ -176,6 +185,7 @@ const LocationPage = () => {
       <div>
         <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
           <img
+            loading="lazy"
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
             src="/Lleft.png"
             alt="Line Left"
@@ -184,6 +194,7 @@ const LocationPage = () => {
             Oakville Branch
           </p>
           <img
+            loading="lazy"
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
             src="/Lright.png"
             alt="Line Right"

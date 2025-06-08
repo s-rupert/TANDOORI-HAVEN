@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { X } from "lucide-react";
 
 import { PageContext } from "../components/PageContext";
@@ -27,6 +27,7 @@ const Userpage = () => {
         {/* Logo */}
         <div className="w-28 h-28 mb-4 bg-yellow-200/40 rounded-full p-2">
           <img
+            loading="lazy"
             src="/Logo.png"
             alt="Logo"
             className="w-full h-full object-contain"

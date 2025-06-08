@@ -1,11 +1,30 @@
-import React, {useContext} from "react";
-import { Star, StarHalf, ShoppingCart, ChevronRight } from "lucide-react";
+import React, { useContext, useState } from "react";
+import {
+  Star,
+  StarHalf,
+  ShoppingCart,
+  ChevronRight,
+  ChevronLeft,
+} from "lucide-react";
 import data from "../JSON/MonthPick.json";
+import dataFullMeal from "../JSON/FullMeal.json";
+import badata from "../JSON/Breakfast&Appetizers.json";
+import sddata from "../JSON/Sweets&desserts.json";
+import drinkdata from "../JSON/Drinks.json";
 
 import { PageContext } from "../components/PageContext";
 
 function Menupage() {
   const { menubtn, setMenubtn } = useContext(PageContext);
+  const [mealSM, setMealSM] = useState(false);
+  const [baSM, setBASM] = useState(false);
+  const [drinkSM, setDrinkSM] = useState(false);
+  const [sdSM, setSDSM] = useState(false);
+
+  const visibleMealData = mealSM ? dataFullMeal : dataFullMeal.slice(0, 8);
+  const visibleBAData = baSM ? badata : badata.slice(0, 8);
+  const visibleDrinkData = drinkSM ? drinkdata : drinkdata.slice(0, 8);
+  const visibleSDData = sdSM ? sddata : sddata.slice(0, 8);
 
   return (
     <div className={`${menubtn ? "block" : "hidden"}`}>
@@ -16,16 +35,19 @@ function Menupage() {
       </p>
       <div>
         <img
+          loading="lazy"
           className="absolute -top-10 opacity-50 left-30 w-[22vw] md:left-[20vw]  z-1 xl:w-[15vw]"
           src="/6.png"
           alt=""
         />
         <img
+          loading="lazy"
           className="absolute opacity-50 top-15 right-20 w-[20vw] z-1 xl:w-[10vw]"
           src="/7.png"
           alt=""
         />
         <img
+          loading="lazy"
           className="absolute opacity-50 top-[50vw] w-[15vw] z-1 md:top-[15vw] xl:w-[10vw]  xl:top-[15vw]"
           src="/8.png"
           alt=""
@@ -34,6 +56,7 @@ function Menupage() {
       {/* full meals  */}
       <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
         <img
+          loading="lazy"
           className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
           src="/Lleft.png"
           alt="Line Left"
@@ -42,6 +65,7 @@ function Menupage() {
           Full Meals Veg & Non Veg
         </p>
         <img
+          loading="lazy"
           className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
           src="/Lright.png"
           alt="Line Right"
@@ -49,17 +73,13 @@ function Menupage() {
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
         <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
-          {data.map((item) => (
+          {visibleMealData.map((item) => (
             <div className="relative w-45 lg:w-60 xl:w-80">
               <img
+                loading="lazy"
                 className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
                 src={item.image}
                 alt={item.name}
-              />
-              <img
-                className="w-[9vw] absolute -mt-25 lg:-mt-35 xl:-mt-45"
-                src="/Tpicks.png"
-                alt="Top Picks"
               />
               <p className="text-center text-sm font-bold xl:text-lg">
                 {item.name}
@@ -111,13 +131,31 @@ function Menupage() {
             </div>
           ))}
         </div>
-        <div className="px-1 py-3 hover:bg-gray-300 rounded-sm">
+        <div
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
+            mealSM ? "hidden" : ""
+          }`}
+          onClick={() => {
+            setMealSM(true);
+          }}
+        >
           <ChevronRight size={40} />
+        </div>
+        <div
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
+            mealSM ? "" : "hidden"
+          }`}
+          onClick={() => {
+            setMealSM(false);
+          }}
+        >
+          <ChevronLeft size={40} />
         </div>
       </div>
       {/* snacks and appetizers */}
       <div className="flex justify-between w-screen items-center overflow-hidden mt-10 lg:h-[10vw] xl:mt-0">
         <img
+          loading="lazy"
           className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
           src="/Lleft.png"
           alt="Line Left"
@@ -126,6 +164,7 @@ function Menupage() {
           Snacks and Appetizers
         </p>
         <img
+          loading="lazy"
           className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
           src="/Lright.png"
           alt="Line Right"
@@ -133,17 +172,13 @@ function Menupage() {
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
         <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
-          {data.map((item) => (
+          {visibleBAData.map((item) => (
             <div className="relative w-45 lg:w-60 xl:w-80">
               <img
+                loading="lazy"
                 className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
                 src={item.image}
                 alt={item.name}
-              />
-              <img
-                className="w-[9vw] absolute -mt-25 lg:-mt-35 xl:-mt-45"
-                src="/Tpicks.png"
-                alt="Top Picks"
               />
               <p className="text-center text-sm font-bold xl:text-lg">
                 {item.name}
@@ -195,13 +230,31 @@ function Menupage() {
             </div>
           ))}
         </div>
-        <div className="px-1 py-3 hover:bg-gray-300 rounded-sm">
+        <div
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
+            baSM ? "hidden" : ""
+          }`}
+          onClick={() => {
+            setBASM(true);
+          }}
+        >
           <ChevronRight size={40} />
+        </div>
+        <div
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
+            baSM ? "" : "hidden"
+          }`}
+          onClick={() => {
+            setBASM(false);
+          }}
+        >
+          <ChevronLeft size={40} />
         </div>
       </div>
       {/* drinks */}
       <div className="flex justify-between w-screen items-center overflow-hidden mt-10 lg:h-[10vw] xl:mt-0">
         <img
+          loading="lazy"
           className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
           src="/Lleft.png"
           alt="Line Left"
@@ -210,6 +263,7 @@ function Menupage() {
           Cold Drinks, Wine & Beer
         </p>
         <img
+          loading="lazy"
           className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
           src="/Lright.png"
           alt="Line Right"
@@ -217,17 +271,13 @@ function Menupage() {
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
         <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
-          {data.map((item) => (
+          {visibleDrinkData.map((item) => (
             <div className="relative w-45 lg:w-60 xl:w-80">
               <img
+                loading="lazy"
                 className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
                 src={item.image}
                 alt={item.name}
-              />
-              <img
-                className="w-[9vw] absolute -mt-25 lg:-mt-35 xl:-mt-45"
-                src="/Tpicks.png"
-                alt="Top Picks"
               />
               <p className="text-center text-sm font-bold xl:text-lg">
                 {item.name}
@@ -279,13 +329,31 @@ function Menupage() {
             </div>
           ))}
         </div>
-        <div className="px-1 py-3 hover:bg-gray-300 rounded-sm">
+        <div
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
+            drinkSM ? "hidden" : ""
+          }`}
+          onClick={() => {
+            setDrinkSM(true);
+          }}
+        >
           <ChevronRight size={40} />
+        </div>
+        <div
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
+            drinkSM ? "" : "hidden"
+          }`}
+          onClick={() => {
+            setDrinkSM(false);
+          }}
+        >
+          <ChevronLeft size={40} />
         </div>
       </div>
       {/* desserts */}
       <div className="flex justify-between w-screen items-center overflow-hidden mt-10 lg:h-[10vw] xl:mt-0">
         <img
+          loading="lazy"
           className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
           src="/Lleft.png"
           alt="Line Left"
@@ -294,6 +362,7 @@ function Menupage() {
           Sweets & Desserts
         </p>
         <img
+          loading="lazy"
           className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
           src="/Lright.png"
           alt="Line Right"
@@ -301,17 +370,13 @@ function Menupage() {
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
         <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
-          {data.map((item) => (
+          {visibleSDData.map((item) => (
             <div className="relative w-45 lg:w-60 xl:w-80">
               <img
+                loading="lazy"
                 className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
                 src={item.image}
                 alt={item.name}
-              />
-              <img
-                className="w-[9vw] absolute -mt-25 lg:-mt-35 xl:-mt-45"
-                src="/Tpicks.png"
-                alt="Top Picks"
               />
               <p className="text-center text-sm font-bold xl:text-lg">
                 {item.name}
@@ -363,12 +428,31 @@ function Menupage() {
             </div>
           ))}
         </div>
-        <div className="px-1 py-3 hover:bg-gray-300 rounded-sm">
+        <div
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
+            sdSM ? "hidden" : ""
+          }`}
+          onClick={() => {
+            setSDSM(true);
+          }}
+        >
           <ChevronRight size={40} />
+        </div>
+        <div
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
+            sdSM ? "" : "hidden"
+          }`}
+          onClick={() => {
+            setSDSM(false);
+          }}
+        >
+          <ChevronLeft size={40} />
         </div>
       </div>
       {/* Search and offer section */}
-      <p className="mt-10 text-center text-lg mx-5 font-bold md:text-xl lg:text-2xl xl:text-3xl">Looking for specific items, Search here and enjoy our quality meals</p>
+      <p className="mt-10 text-center text-lg mx-5 font-bold md:text-xl lg:text-2xl xl:text-3xl">
+        Looking for specific items, Search here and enjoy our quality meals
+      </p>
       <div className="flex justify-center items-center mt-5 mx-5 gap-[5vw]">
         <input
           type="text"
@@ -379,8 +463,13 @@ function Menupage() {
           Search
         </button>
       </div>
-      <p className="mt-10 text-center text-lg mx-5 font-bold text-yellow-700 md:text-xl lg:text-2xl xl:text-3xl">Coupons and Offers</p>
-      <p className="text-center text-sm mx-5">Currently, no coupons or offers are available. Check our menu for reasonable prices.</p>
+      <p className="mt-10 text-center text-lg mx-5 font-bold text-yellow-700 md:text-xl lg:text-2xl xl:text-3xl">
+        Coupons and Offers
+      </p>
+      <p className="text-center text-sm mx-5">
+        Currently, no coupons or offers are available. Check our menu for
+        reasonable prices.
+      </p>
     </div>
   );
 }

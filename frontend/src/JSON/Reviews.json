@@ -1,0 +1,107 @@
+[
+  {
+    "author_name": "Aman Sharma",
+    "rating": 5,
+    "text": "Fantastic food and amazing service! The staff were very friendly, and the ambiance was perfect. Highly recommend this place!",
+    "relative_time_description": "2 weeks ago",
+    "url": "/reviewimg/aman_sharma.jpg"
+  },
+  {
+    "author_name": "Emily Johnson",
+    "rating": 4.5,
+    "text": "Great flavors and authentic dishes. The butter chicken was delicious. Will come back for sure!",
+    "relative_time_description": "1 month ago",
+    "url": "/reviewimg/emily_johnson.jpg"
+  },
+  {
+    "author_name": "Rajesh Kumar",
+    "rating": 4,
+    "text": "Good food but the service was a bit slow. Overall a pleasant experience.",
+    "relative_time_description": "3 weeks ago",
+    "url": "/reviewimg/rajesh_kumar.jpg"
+  },
+  {
+    "author_name": "Simon Samuel",
+    "rating": 4.5,
+    "text": "Lovely ambiance and tasty food. The naan was fresh and soft. Highly recommend the samosas.",
+    "relative_time_description": "4 days ago",
+    "url": "/reviewimg/simon_samuel.jpg"
+  },
+  {
+    "author_name": "Kino Bahm",
+    "rating": 3.5,
+    "text": "Decent place with good vegetarian options. Could improve on presentation.",
+    "relative_time_description": "2 months ago",
+    "url": "/reviewimg/kino_bahm.jpg"
+  },
+  {
+    "author_name": "Pitals Por",
+    "rating": 5,
+    "text": "Absolutely loved the flavors and the friendly staff. A must-visit for Indian cuisine lovers!",
+    "relative_time_description": "1 week ago",
+    "url": "/reviewimg/pitals_por.jpg"
+  },
+  {
+    "author_name": "Michael Thompson",
+    "rating": 4,
+    "text": "Good value for money. Portions were generous and the spices were balanced well.",
+    "relative_time_description": "5 days ago",
+    "url": "/reviewimg/michael_thompson.jpg"
+  },
+  {
+    "author_name": "Muen Salvador",
+    "rating": 4.5,
+    "text": "Nice atmosphere and excellent service. Loved the paneer tikka.",
+    "relative_time_description": "3 weeks ago",
+    "url": "/reviewimg/muen_salvador.jpg"
+  },
+  {
+    "author_name": "Hugo Jen",
+    "rating": 5,
+    "text": "One of the best Indian restaurants in town! Highly recommend the biryani.",
+    "relative_time_description": "2 months ago",
+    "url": "/reviewimg/hugo_jen.jpg"
+  },
+  {
+    "author_name": "Jennifer Lee",
+    "rating": 3.5,
+    "text": "Food was okay but a bit salty for my taste. Friendly staff though.",
+    "relative_time_description": "1 month ago",
+    "url": "/reviewimg/jennifer_lee.jpg"
+  },
+  {
+    "author_name": "Karl Simon",
+    "rating": 4,
+    "text": "Good food and quick service. The garlic naan was especially tasty.",
+    "relative_time_description": "4 days ago",
+    "url": "/reviewimg/karl_simon.jpg"
+  },
+  {
+    "author_name": "Deepa Joshi",
+    "rating": 4.5,
+    "text": "Lovely flavors and excellent customer care. The desserts were a perfect finish.",
+    "relative_time_description": "3 weeks ago",
+    "url": "/reviewimg/deepa_joshi.jpg"
+  },
+  {
+    "author_name": "Amit Singh",
+    "rating": 5,
+    "text": "Perfect place for family dinners. The staff is very attentive and the food is always fresh.",
+    "relative_time_description": "1 week ago",
+    "url": "/reviewimg/amit_sah.jpg"
+  },
+  {
+    "author_name": "Neela Shah",
+    "rating": 4,
+    "text": "Good taste and decent prices. Would love to see more vegan options.",
+    "relative_time_description": "2 months ago",
+    "url": "/reviewimg/neela_sah.jpg"
+  },
+  {
+    "author_name": "Suresh Kumar",
+    "rating": 4.5,
+    "text": "Authentic flavors and nice ambiance. The service staff was very courteous.",
+    "relative_time_description": "2 weeks ago",
+    "url": "/reviewimg/suresh_kumar.jpg"
+  }
+]

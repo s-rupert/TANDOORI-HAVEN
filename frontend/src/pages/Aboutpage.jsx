@@ -15,16 +15,19 @@ const AboutPage = () => {
       </p>
       <div>
         <img
+          loading="lazy"
           className="absolute -top-10 opacity-50 left-30 w-[22vw] md:left-[20vw]  z-1 xl:w-[15vw]"
           src="/16.png"
           alt=""
         />
         <img
+          loading="lazy"
           className="absolute opacity-50 top-15 right-20 w-[20vw] z-1 xl:w-[10vw]"
           src="/18.png"
           alt=""
         />
         <img
+          loading="lazy"
           className="absolute opacity-50 top-[50vw] w-[15vw] z-1 md:top-[15vw] xl:w-[10vw]  xl:top-[15vw]"
           src="/17.png"
           alt=""
@@ -33,12 +36,13 @@ const AboutPage = () => {
       <div>
         <div className="flex flex-col justify-center gap-4 lg:gap-[4rem] mt-20 md:flex-row">
           <img
+            loading="lazy"
             className="md:w-[50%] lg:w-[40%] xl:w-[30%]"
             src="/Des1.png"
             alt=""
           />
           <div className="md:w-[50%] lg:w-[40%] xl:w-[30%]">
-            <img src="/Line.png" alt="line" />
+            <img loading="lazy" src="/Line.png" alt="line" />
             <p className="font-bold text-xl -mt-4">Our Story</p>
             <p className="text-center text-justify">
               Founded with a love for traditional Indian cooking, our journey
@@ -51,7 +55,7 @@ const AboutPage = () => {
         </div>
         <div className="flex flex-col justify-center gap-4 lg:gap-[4rem] mt-20 md:flex-row">
           <div className="md:w-[50%] lg:w-[40%] xl:w-[30%]">
-            <img src="/Line.png" alt="line" />
+            <img loading="lazy" src="/Line.png" alt="line" />
             <p className="font-bold text-xl -mt-4">What We Offer</p>
             <p className="text-center text-justify">
               We serve a wide variety of Veg and Non-Veg dishes, prepared fresh
@@ -72,7 +76,7 @@ const AboutPage = () => {
             </ul>
           </div>
           <div className="md:w-[50%] lg:w-[40%] xl:w-[30%] flex flex-col items-center justify-center gap-4">
-            <img className="" src="/Des2.png" alt="" />
+            <img loading="lazy" className="" src="/Des2.png" alt="" />
             <p>Click below to check our menu and reservation page.</p>
             <div className="flex gap-4">
               <button className="px-2 py-1 bg-yellow-700 rounded-md">
@@ -86,12 +90,13 @@ const AboutPage = () => {
         </div>
         <div className="flex flex-col justify-center gap-4 lg:gap-[4rem] mt-20 md:flex-row">
           <img
+            loading="lazy"
             className="md:w-[50%] lg:w-[40%] xl:w-[30%]"
             src="/Des3.png"
             alt=""
           />
           <div className="md:w-[50%] lg:w-[40%] xl:w-[30%]">
-            <img src="/Line.png" alt="line" />
+            <img loading="lazy" src="/Line.png" alt="line" />
             <p className="font-bold text-xl -mt-4">Our Delivery Partners</p>
             <p className="text-center text-justify">
               For added convenience, we’ve partnered with leading delivery
@@ -105,11 +110,13 @@ const AboutPage = () => {
             </p>
             <div className="flex gap-10 mt-5 justify-center">
               <img
+                loading="lazy"
                 className="h-9 rounded-sm"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDWwQVdqf7QweOQKg2eCxFqeOh9EMBebySgg&s"
                 alt=""
               />
               <img
+                loading="lazy"
                 className="h-9"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/SkipTheDishes_logo.svg/2560px-SkipTheDishes_logo.svg.png"
                 alt=""
@@ -119,7 +126,7 @@ const AboutPage = () => {
         </div>
         <div className="flex flex-col justify-center gap-4 lg:gap-[4rem] mt-20 md:flex-row">
           <div className="md:w-[50%] lg:w-[40%] xl:w-[30%]">
-            <img src="/Line.png" alt="line" />
+            <img loading="lazy" src="/Line.png" alt="line" />
             <p className="font-bold text-xl -mt-4">Our Commitment</p>
             <p className="text-center text-justify">
               We take pride in using fresh ingredients, maintaining strict
@@ -129,6 +136,7 @@ const AboutPage = () => {
             </p>
           </div>
           <img
+            loading="lazy"
             className="md:w-[50%] lg:w-[40%] xl:w-[30%]"
             src="/Des4.png"
             alt=""
@@ -143,8 +151,12 @@ const AboutPage = () => {
           quality. Visit one of our branches or explore our services online—we
           look forward to serving you soon!
         </p>
-        <p className="mt-5 font-semibold">Subscribe for future offers and updates.</p>
-        <button className="px-4 py-2 bg-red-700 rounded-md mt-3 text-white hover:bg-red-500">Subscribe</button>
+        <p className="mt-5 font-semibold">
+          Subscribe for future offers and updates.
+        </p>
+        <button className="px-4 py-2 bg-red-700 rounded-md mt-3 text-white hover:bg-red-500">
+          Subscribe
+        </button>
       </div>
     </div>
   );

@@ -1,0 +1,142 @@
+    [
+  {
+    "name": "Gulab Jamun",
+    "price": 4.00,
+    "rating": 4.8,
+    "ingredients": "Milk solids, sugar syrup, cardamom",
+    "image": "/sweetdesserts/gulab_jamun.jpg"
+  },
+  {
+    "name": "Butter Tart", 
+    "price": 3.00,
+    "rating": 4.7,
+    "ingredients": "Butter, sugar, eggs, pastry shell",
+    "image": "/sweetdesserts/butter_tart.jpg"
+  },
+  {
+    "name": "Rasgulla",
+    "price": 4.00,
+    "rating": 4.6,
+    "ingredients": "Chenna, sugar syrup",
+    "image": "/sweetdesserts/rasgulla.jpg"
+  },
+  {
+    "name": "Nanaimo Bar",
+    "price": 3.50,
+    "rating": 4.7,
+    "ingredients": "Coconut, chocolate, custard, graham crackers",
+    "image": "/sweetdesserts/nanaimo_bars.jpg"
+  },
+  {
+    "name": "Kaju Katli",
+    "price": 5.00,
+    "rating": 4.9,
+    "ingredients": "Cashew nuts, sugar, ghee",
+    "image": "/sweetdesserts/kaju_katli.jpg"
+  },
+  {
+    "name": "Maple Syrup Pie",
+    "price": 4.50,
+    "rating": 4.5,
+    "ingredients": "Maple syrup, eggs, pie crust",
+    "image": "/sweetdesserts/maple_syrup_pie.webp"
+  },
+  {
+    "name": "Jalebi",
+    "price": 3.50,
+    "rating": 4.6,
+    "ingredients": "Maida flour, sugar syrup, ghee",
+    "image": "/sweetdesserts/jalevi.jpg"
+  },
+  {
+    "name": "BeaverTails",
+    "price": 5.00,
+    "rating": 4.8,
+    "ingredients": "Fried dough, cinnamon, sugar",
+    "image": "/sweetdesserts/beavertails.jpg"
+  },
+  {
+    "name": "Sandesh",
+    "price": 4.00,
+    "rating": 4.5,
+    "ingredients": "Chenna, sugar, cardamom",
+    "image": "/sweetdesserts/sandesh.jpg"
+  },
+  {
+    "name": "Pouding Chômeur",
+    "price": 4.50,
+    "rating": 4.6,
+    "ingredients": "Flour, brown sugar, maple syrup",
+    "image": "/sweetdesserts/pouding_chomeur.jpg"
+  },
+  {
+    "name": "Ladoo",
+    "price": 3.00,
+    "rating": 4.6,
+    "ingredients": "Gram flour, ghee, sugar",
+    "image": "/sweetdesserts/ladoo.jpg"
+  },
+  {
+    "name": "Maple Cream Cookies",
+    "price": 3.50,
+    "rating": 4.4,
+    "ingredients": "Maple syrup, flour, cream filling",
+    "image": "/sweetdesserts/maple_cream_cookies.webp"
+  },
+  {
+    "name": "Barfi",
+    "price": 4.00,
+    "rating": 4.5,
+    "ingredients": "Milk powder, sugar, cardamom",
+    "image": "/sweetdesserts/barfi.jpg"
+  },
+  {
+    "name": "Tarte au Sucre",
+    "price": 4.50,
+    "rating": 4.7,
+    "ingredients": "Brown sugar, butter, cream",
+    "image": "/sweetdesserts/tarte_au_sucre.avif"
+  },
+  {
+    "name": "Shrikhand",
+    "price": 4.00,
+    "rating": 4.6,
+    "ingredients": "Hung curd, sugar, saffron, cardamom",
+    "image": "/sweetdesserts/shrikhand.jpg"
+  },
+  {
+    "name": "Blueberry Grunt",
+    "price": 4.50,
+    "rating": 4.5,
+    "ingredients": "Blueberries, biscuit dough, sugar",
+    "image": "/sweetdesserts/blueberry_grunt.jpg"
+  },
+  {
+    "name": "Kheer",
+    "price": 3.50,
+    "rating": 4.7,
+    "ingredients": "Milk, rice, sugar, cardamom, nuts",
+    "image": "/sweetdesserts/kheer.jpg"
+  },
+  {
+    "name": "Persian Roll",
+    "price": 4.00,
+    "rating": 4.4,
+    "ingredients": "Cinnamon roll, icing, cherries",
+    "image": "/sweetdesserts/persian_roll.jpg"
+  },
+  {
+    "name": "Modak",
+    "price": 3.50,
+    "rating": 4.8,
+    "ingredients": "Rice flour, jaggery, coconut",
+    "image": "/sweetdesserts/modak.jpg"
+  },
+  {
+    "name": "Gajar Halwa",
+    "price": 4.00,
+    "rating": 4.7,
+    "ingredients": "Carrot, milk, sugar, ghee, cardamom",
+    "image": "/sweetdesserts/gajar_halwa.jpg"
+  }
+]

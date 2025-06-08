@@ -14,13 +14,6 @@
       "image": "/drinkimg/lassi.jpg"
     },
     {
-      "name": "Thandai",
-      "price": 3.50,
-      "rating": 4.5,
-      "ingredients": "Milk, almonds, fennel seeds, cardamom, rose petals, sugar",
-      "image": "/drinkimg/thandai.jpg"
-    },
-    {
       "name": "Nimbu Pani",
       "price": 1.50,
       "rating": 4.3,
@@ -35,18 +28,11 @@
       "image": "/drinkimg/jaljeera.jpg"
     },
     {
-      "name": "Filter Coffee",
-      "price": 2.50,
-      "rating": 4.6,
-      "ingredients": "Coffee decoction, milk, sugar",
-      "image": "/drinkimg/filter_coffee.jpg"
-    },
-    {
       "name": "Sol Kadhi",
       "price": 3.00,
       "rating": 4.2,
       "ingredients": "Coconut milk, kokum, cumin, green chili",
-      "image": "/drinkimg/sol_kadhi.jpg"
+      "image": "/drinkimg/sol_kadhai.jpg"
     },
     {
       "name": "Badam Milk",
@@ -84,46 +70,11 @@
       "image": "/drinkimg/pepsi.jpg"
     },
     {
-      "name": "Sprite",
-      "price": 1.50,
-      "rating": 4.1,
-      "ingredients": "Carbonated water, sugar, lemon-lime flavor",
-      "image": "/drinkimg/sprite.jpg"
-    },
-    {
-      "name": "Fanta",
-      "price": 1.50,
-      "rating": 4.1,
-      "ingredients": "Carbonated water, sugar, orange flavor",
-      "image": "/drinkimg/fanta.jpg"
-    },
-    {
-      "name": "Mountain Dew",
-      "price": 1.70,
-      "rating": 4.0,
-      "ingredients": "Carbonated water, sugar, caffeine, citrus flavor",
-      "image": "/drinkimg/mountain_dew.jpg"
-    },
-    {
-      "name": "7 Up",
-      "price": 1.50,
-      "rating": 4.0,
-      "ingredients": "Carbonated water, sugar, lemon-lime flavor",
-      "image": "/drinkimg/7up.jpg"
-    },
-    {
       "name": "Red Bull",
       "price": 3.00,
       "rating": 4.2,
       "ingredients": "Carbonated water, caffeine, taurine, sugar",
       "image": "/drinkimg/red_bull.jpg"
-    },
-    {
-      "name": "Nimbu Soda",
-      "price": 1.80,
-      "rating": 4.1,
-      "ingredients": "Soda water, lemon juice, sugar, salt",
-      "image": "/drinkimg/nimbu_soda.jpg"
     },
     {
       "name": "Cold Coffee",
@@ -140,108 +91,73 @@
       "image": "/drinkimg/ice_tea.jpg"
     },
     {
-      "name": "Kingfisher Premium",
-      "price": 4.00,
-      "rating": 4.0,
-      "ingredients": "Water, barley malt, hops, yeast",
-      "image": "/drinkimg/kingfisher_premium.jpg"
-    },
-    {
-      "name": "Kingfisher Strong",
-      "price": 4.50,
-      "rating": 4.1,
-      "ingredients": "Water, barley malt, hops, yeast",
-      "image": "/drinkimg/kingfisher_strong.jpg"
-    },
-    {
-      "name": "Haywards 5000",
-      "price": 5.00,
-      "rating": 4.2,
-      "ingredients": "Water, malted barley, hops, yeast",
-      "image": "/drinkimg/haywards_5000.jpg"
-    },
-    {
-      "name": "Royal Challenge",
-      "price": 5.50,
-      "rating": 4.3,
-      "ingredients": "Water, malted barley, hops, yeast",
-      "image": "/drinkimg/royal_challenge.jpg"
-    },
-    {
-      "name": "Goa King Beer",
-      "price": 4.50,
-      "rating": 4.0,
-      "ingredients": "Water, malt, hops, yeast",
-      "image": "/drinkimg/goa_king_beer.jpg"
-    },
-    {
-      "name": "Sula Sauvignon Blanc",
-      "price": 15.00,
-      "rating": 4.5,
-      "ingredients": "Sauvignon Blanc grapes",
-      "image": "/drinkimg/sula_sauvignon_blanc.jpg"
-    },
-    {
-      "name": "Sula Shiraz",
-      "price": 17.00,
-      "rating": 4.6,
-      "ingredients": "Shiraz grapes",
-      "image": "/drinkimg/sula_shiraz.jpg"
-    },
-    {
-      "name": "Fratelli Sette",
-      "price": 20.00,
-      "rating": 4.7,
-      "ingredients": "Cabernet Sauvignon, Sangiovese",
-      "image": "/drinkimg/fratelli_sette.jpg"
-    },
-    {
-      "name": "Grover Zampa La Réserve",
-      "price": 22.00,
-      "rating": 4.6,
-      "ingredients": "Cabernet Sauvignon, Shiraz",
-      "image": "/drinkimg/grover_zampa_la_reserve.jpg"
-    },
-    {
-      "name": "Mysore Royal Beer",
-      "price": 4.00,
-      "rating": 4.0,
-      "ingredients": "Water, malt, hops, yeast",
-      "image": "/drinkimg/mysore_royal_beer.jpg"
-    },
-    {
-      "name": "Carlsberg",
-      "price": 5.00,
-      "rating": 4.3,
-      "ingredients": "Water, barley malt, hops, yeast",
-      "image": "/drinkimg/carlsberg.jpg"
-    },
-    {
-      "name": "Heineken",
-      "price": 6.00,
-      "rating": 4.5,
-      "ingredients": "Water, malted barley, hops, yeast",
-      "image": "/drinkimg/heineken.jpg"
-    },
-    {
-      "name": "Corona Extra",
-      "price": 6.50,
-      "rating": 4.4,
-      "ingredients": "Water, barley malt, hops, yeast",
-      "image": "/drinkimg/corona_extra.jpg"
-    },
-    {
-      "name": "Budweiser",
-      "price": 5.50,
-      "rating": 4.3,
-      "ingredients": "Water, barley malt, hops, yeast",
-      "image": "/drinkimg/budweiser.jpg"
-    },
-    {
-      "name": "Kingfisher Ultra",
-      "price": 5.00,
-      "rating": 4.2,
-      "ingredients": "Water, malt, hops, yeast",
-      "image": "/drinkimg/kingfisher_ultra.jpg"
-    }
+    "name": "Bintang",
+    "price": 2.50,
+    "rating": 4.1,
+    "ingredients": "Water, malted barley, corn, hops, yeast",
+    "image": "/drinkimg/bintang.jpg"
+  },
+  {
+    "name": "Labatt Blue",
+    "price": 2.50,
+    "rating": 4.0,
+    "ingredients": "Water, malted barley, corn, hops, yeast",
+    "image": "/drinkimg/labatt_blue.jpg"
+  },
+  {
+    "name": "Steam Whistle Pilsner",
+    "price": 3.00,
+    "rating": 4.3,
+    "ingredients": "Spring water, malted barley, hops, yeast",
+    "image": "/drinkimg/steam_whistle_pilsner.jpg"
+  },
+  {
+    "name": "La Fin du Monde",
+    "price": 4.00,
+    "rating": 4.5,
+    "ingredients": "Water, malted barley, hops, yeast, spices",
+    "image": "/drinkimg/la_fin_du_monde.jpg"
+  },
+  {
+    "name": "Peller Estates Icewine",
+    "price": 30.00,
+    "rating": 4.7,
+    "ingredients": "Vidal grapes",
+    "image": "/drinkimg/peller_estates_icewine.jpg"
+  },
+  {
+    "name": "Wayne Gretzky No. 99 Red Cask Whisky",
+    "price": 35.00,
+    "rating": 4.6,
+    "ingredients": "Canadian whisky aged in red wine casks",
+    "image": "/drinkimg/peller_estates_icewine.jpg"
+  },
+  {
+    "name": "Crown Royal Canadian Whisky",
+    "price": 40.00,
+    "rating": 4.8,
+    "ingredients": "Blend of Canadian whiskies",
+    "image": "/drinkimg/peller_estates_icewine.jpg"
+  },
+  {
+    "name": "Canadian Club 100% Rye",
+    "price": 30.00,
+    "rating": 4.4,
+    "ingredients": "100% rye grain whisky",
+    "image": "/drinkimg/peller_estates_icewine.jpg"
+  },
+  {
+    "name": "Inniskillin Vidal Icewine",
+    "price": 45.00,
+    "rating": 4.9,
+    "ingredients": "Vidal grapes",
+    "image": "/drinkimg/peller_estates_icewine.jpg"
+  },
+  {
+    "name": "Alexander Keith's India Pale Ale",
+    "price": 2.75,
+    "rating": 4.2,
+    "ingredients": "Water, malted barley, hops, yeast",
+    "image": "/drinkimg/peller_estates_icewine.jpg"
+  }
   ]

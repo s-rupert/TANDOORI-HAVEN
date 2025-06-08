@@ -1,5 +1,5 @@
 // PageContext.jsx
-import { createContext, useState } from "react";
+import { createContext, useState, useRef } from "react";
 
 export const PageContext = createContext();
 
@@ -9,8 +9,12 @@ export const PageProvider = ({ children }) => {
   const [reservation, setReservation] = useState(false);
   const [about, setAbout] = useState(false);
   const [contact, setContact] = useState(false);
-  const [homePage, setHomePage] = useState(true);
+  const [homePage, setHomePage] = useState(false);
   const [userbtn, setUserbtn] = useState(false)
+  const [scrollTo, setScrollTo] = useState(0)
+  const tablebookRef = useRef(null);
+  const cateringRef = useRef(null);
+  const dailylunchRef = useRef(null);
 
   const menuHandler = (num) => {
     switch (num) {
@@ -97,7 +101,11 @@ export const PageProvider = ({ children }) => {
         setHomePage,
         userbtn,
         setUserbtn,
-
+        tablebookRef,
+        cateringRef,
+        dailylunchRef,
+        scrollTo,
+        setScrollTo
       }}
     >
       {children}

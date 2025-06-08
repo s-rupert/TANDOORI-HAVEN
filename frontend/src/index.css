@@ -3,7 +3,6 @@
 
 *{
     box-sizing: border-box;
-    /* overflow-x:hidden; */
     font-family: outfit, sans-serif;
 }
 body {
@@ -12,3 +11,14 @@ body {
   -ms-user-select: none;      /* IE10+/Edge */
   user-select: none;          /* Standard */
 }
+ @keyframes scroll {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .marquee {
+      animation: scroll 60s linear infinite;
+    }

@@ -1,4 +1,4 @@
-import react, { useEffect, useState, useContext } from "react";
+import react, { useEffect, useState, useContext, useRef } from "react";
 import {
   UserRound,
   ShoppingCart,
@@ -20,24 +20,45 @@ import ReservationPage from "./pages/Reservationpage";
 import AboutPage from "./pages/Aboutpage";
 import ContactPage from "./pages/Contactpage";
 import Userpage from "./pages/Userpage";
+import Review from "./pages/Review";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const {
-    menubtn, setMenubtn,
-    location, setLocation,
-    reservation, setReservation,
-    about, setAbout,
-    contact, setContact, homePage, setHomePage, menuHandler, userbtn, setUserbtn
+    menubtn,
+    setMenubtn,
+    location,
+    setLocation,
+    reservation,
+    setReservation,
+    about,
+    setAbout,
+    contact,
+    setContact,
+    homePage,
+    setHomePage,
+    menuHandler,
+    userbtn,
+    setUserbtn,
+    scrollTo,
+    setScrollTo,
   } = useContext(PageContext);
 
-  
+  const scrollToSection = (val) => {
+    setScrollTo(val);
+    menuHandler(2);
+  };
 
   return (
-    <div className="bg-amber-50 h-screen w-screen relative overflow-x-hidden">
+    <div
+      className={`bg-amber-50 h-screen w-screen relative overflow-x-hidden ${
+        userbtn ? "overflow-hidden" : ""
+      }`}
+    >
       {/* Header */}
       <div className="flex justify-between h-35 p-2 h-auto md:relative md:z-10">
         <img
+          loading="lazy"  
           className="w-[25vw] h-[25vw] ml-5 md:w-[15vw] md:h-[15vw] xl:w-[10vw] xl:h-[10vw]"
           src="/Logo.png"
           alt="logo"
@@ -103,7 +124,9 @@ function App() {
           </div>
           <div
             className="text-white rounded-full flex items-center h-[7vw] text-lg md:text-xs md:text-yellow-700 md:h-[3vw] lg:text-sm xl:h-[2vw]"
-            onClick={() => {setUserbtn(true)}}
+            onClick={() => {
+              setUserbtn(true);
+            }}
           >
             <UserRound />
           </div>
@@ -117,26 +140,31 @@ function App() {
       </div>
       <div className={`${homePage ? "block" : "hidden"}`}>
         <img
+          loading="lazy"
           className="absolute -top-10 opacity-50 left-20 w-[22vw] md:left-[20vw]  z-1 xl:w-[15vw]"
           src="/1.png"
           alt=""
         />
         <img
+          loading="lazy"
           className="absolute opacity-50 top-0 right-20 w-[20vw] z-1 xl:w-[10vw]"
           src="/2.png"
           alt=""
         />
         <img
+          loading="lazy"
           className="absolute opacity-50 top-[70vw] left-[15vw] w-[15vw] z-1 md:top-[45vw] xl:w-[10vw] xl:left-[10vw] xl:top-[35vw]"
           src="/3.png"
           alt=""
         />
         <img
+          loading="lazy"
           className="absolute opacity-50 top-[25vw] -left-[5vw] w-[22vw] z-1 xl:w-[15vw] xl:top-[20vw]"
           src="/4.png"
           alt=""
         />
         <img
+          loading="lazy"
           className="absolute opacity-50 top-[80vw] left-[70vw] w-[32vw] z-1 md:top-[45vw] md:w-[20vw] xl:w-[10vw] xl:left-[90vw]"
           src="/5.png"
           alt=""
@@ -157,6 +185,7 @@ function App() {
             </p>
           </div>
           <img
+            loading="lazy"
             className="w-[70%] ml-40 h-auto pr-10 md:w-[40%] md:ml-0 md:pr-0 xl:w-[40%] xl:mr-10"
             src="/ModelImg.png"
             alt="Model"
@@ -165,6 +194,7 @@ function App() {
         {/* Hot Choice Menu */}
         <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
           <img
+            loading="lazy"
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
             src="/Lleft.png"
             alt="Line Left"
@@ -174,21 +204,24 @@ function App() {
             Choice
           </p>
           <img
+            loading="lazy"
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
             src="/Lright.png"
             alt="Line Right"
           />
         </div>
-        <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
+        <div className="overflow-x-scroll w-full h-auto flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
           <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
             {data.map((item) => (
               <div className="relative w-45 lg:w-60 xl:w-80">
                 <img
+                  loading="lazy"
                   className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
                   src={item.image}
                   alt={item.name}
                 />
                 <img
+                  loading="lazy"
                   className="w-[9vw] absolute -mt-25 lg:-mt-35 xl:-mt-45"
                   src="/Tpicks.png"
                   alt="Top Picks"
@@ -246,13 +279,17 @@ function App() {
               </div>
             ))}
           </div>
-          <div className="px-1 py-3 hover:bg-gray-300 rounded-sm">
+          <div
+            className="px-1 py-3 hover:bg-gray-300 rounded-sm"
+            onClick={() => menuHandler(0)}
+          >
             <ChevronRight size={40} />
           </div>
         </div>
         {/* Reservation */}
         <div className="flex justify-between w-screen items-center overflow-hidden mt-10 lg:h-[10vw]">
           <img
+            loading="lazy"
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
             src="/Lleft.png"
             alt="Line Left"
@@ -261,6 +298,7 @@ function App() {
             Reservation Options
           </p>
           <img
+            loading="lazy"
             className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
             src="/Lright.png"
             alt="Line Right"
@@ -269,6 +307,7 @@ function App() {
         <div className="flex flex-wrap justify-center items-center gap-10 lg:gap-5 lg:mx-5">
           <div className="w-90 flex flex-col items-center justify-center lg:w-80 xl:w-[30%]">
             <img
+              loading="lazy"
               className="w-80 h-55 rounded-lg lg:w-75 lg:h-45"
               src="/Des5.png"
               alt="Reservation"
@@ -279,12 +318,18 @@ function App() {
               gatherings like family or friends. Click below to book a table at
               your nearest Tandoori Haven restaurant.
             </p>
-            <button className="px-5 py-2 bg-yellow-700 text-white rounded-lg mt-5 hover:bg-yellow-500">
+            <button
+              className="px-5 py-2 bg-yellow-700 text-white rounded-lg mt-5 hover:bg-yellow-500"
+              onClick={() => {
+                scrollToSection(1);
+              }}
+            >
               Book Now
             </button>
           </div>
           <div className="w-90 flex flex-col items-center justify-center lg:w-80 xl:w-[30%]">
             <img
+              loading="lazy"
               className="w-80 h-55 rounded-lg lg:w-75 lg:h-45"
               src="/Des6.png"
               alt="Reservation"
@@ -295,12 +340,18 @@ function App() {
               well as family gatherings and festive celebrations. Contact us now
               and book a date.
             </p>
-            <button className="px-5 py-2 bg-yellow-700 text-white rounded-lg mt-5 hover:bg-yellow-500">
+            <button
+              className="px-5 py-2 bg-yellow-700 text-white rounded-lg mt-5 hover:bg-yellow-500"
+              onClick={() => {
+                scrollToSection(2);
+              }}
+            >
               Book Now
             </button>
           </div>
           <div className="w-90 flex flex-col items-center justify-center lg:w-80 xl:w-[30%]">
             <img
+              loading="lazy"
               className="w-80 h-55 rounded-lg lg:w-75 lg:h-45"
               src="/Des7.png"
               alt="Reservation"
@@ -311,7 +362,12 @@ function App() {
               deliver the food on a daily basis to your liking. Click below to
               select food type and pricing.
             </p>
-            <button className="px-5 py-2 bg-yellow-700 text-white rounded-lg mt-5 hover:bg-yellow-500">
+            <button
+              className="px-5 py-2 bg-yellow-700 text-white rounded-lg mt-5 hover:bg-yellow-500"
+              onClick={() => {
+                scrollToSection(3);
+              }}
+            >
               Book Now
             </button>
           </div>
@@ -323,6 +379,7 @@ function App() {
       <ReservationPage />
       <AboutPage />
       <ContactPage />
+      <Review />
       {/* Footer */}
       <div className="bg-yellow-700 text-white flex justify-between mt-10 p-5 gap-5 xl:px-20">
         <div className="flex flex-col items-center gap-2 lg:gap-3">
@@ -360,11 +417,13 @@ function App() {
           <p className="font-bold text-lg text-center">Delivery Partner</p>
           <div className="flex gap-3 mt-2 justify-center">
             <img
+              loading="lazy"
               className="h-7 w-7 rounded-sm"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDWwQVdqf7QweOQKg2eCxFqeOh9EMBebySgg&s"
               alt=""
             />
             <img
+              loading="lazy"
               className="h-7"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/SkipTheDishes_logo.svg/2560px-SkipTheDishes_logo.svg.png"
               alt=""

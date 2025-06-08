@@ -1,0 +1,42 @@
+[
+  {
+    "question": "Where are you located?",
+    "answer": "We are located at 2687 Kipling Ave #1, Etobicoke, ON M9V 0B1, Canada. You can find us on Google Maps.",
+    "key": 1
+  },
+  {
+    "question": "Do you offer dine-in, takeout, and delivery?",
+    "answer": "Yes! We offer all three options. You can dine in, order takeout by phone or website, or use your favorite food delivery apps to enjoy our meals at home.",
+    "key": 2
+  },
+  {
+    "question": "Do I need to make a reservation?",
+    "answer": "Reservations are recommended during weekends and busy evenings, but walk-ins are always welcome!",
+    "key": 3
+  },
+  {
+    "question": "Do you show real customer reviews on this site?",
+    "answer": "Yes — the reviews you see are pulled directly from our Google Maps business listing. These are authentic experiences shared by our guests.",
+    "key": 4
+  },
+  {
+    "question": "What kind of food do you serve?",
+    "answer": "We specialize in authentic Indian cuisine, offering a variety of vegetarian and non-vegetarian dishes, including biryanis, curries, tandoori, and more.",
+    "key": 5
+  },
+  {
+    "question": "Why do I only see a few reviews here?",
+    "answer": "Google allows websites to show only a limited number of reviews via their API — usually up to 5 at a time.",
+    "key": 6
+  },
+  {
+    "question": "Are your dishes halal/vegetarian/vegan friendly?",
+    "answer": "es! We offer halal meat, as well as a wide selection of vegetarian and vegan dishes. Please ask our staff for recommendations.",
+    "key": 7
+  },
+  {
+    "question": "How can I leave a review?",
+    "answer": "We’d love to hear from you! Visit our Google page and click on \"Write a Review\" to share your experience.",
+    "key": 8
+  }
+]
