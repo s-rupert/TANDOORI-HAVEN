@@ -1,37 +1,35 @@
-import React,{useEffect, useRef} from "react";
+import React, { useEffect, useContext, useState} from "react";
 import Reviewdata from "../JSON/Reviews.json";
 import FAQs from "../JSON/FAQs.json"
 import Chatbot from "../components/Chatbot";
+import { PageContext } from "../components/PageContext";
 
 function Review() {
-  const chatbotRef = useRef(null);
+  const { review, setReview } = useContext(PageContext);
   const lightColors = [
-  "#FCE4EC", // light pink
-  "#FFF3E0", // light orange
-  "#E3F2FD", // light blue
-  "#F1F8E9", // light green
-  "#FFFDE7", // light yellow
-  "#EDE7F6", // light purple
-  "#FBE9E7", // light coral
-  "#E0F7FA", // light cyan
-  "#F9FBE7", // light lime
-  "#ECEFF1", // light gray-blue
-  "#F0F4C3", // light chartreuse
-  "#FFE0B2", // light apricot
-  "#E8F5E9", // light mint
-  "#F3E5F5", // light lavender
-  "#FFF8E1", // light cream
-];
+    "#FCE4EC", // light pink
+    "#FFF3E0", // light orange
+    "#E3F2FD", // light blue
+    "#F1F8E9", // light green
+    "#FFFDE7", // light yellow
+    "#EDE7F6", // light purple
+    "#FBE9E7", // light coral
+    "#E0F7FA", // light cyan
+    "#F9FBE7", // light lime
+    "#ECEFF1", // light gray-blue
+    "#F0F4C3", // light chartreuse
+    "#FFE0B2", // light apricot
+    "#E8F5E9", // light mint
+    "#F3E5F5", // light lavender
+    "#FFF8E1", // light cream
+  ];
+
   
-    useEffect(() => {
-    if (chatbotRef.current) {
-      chatbotRef.current.style.bottom = '500px';
-    }
-  }, []);
+
 
   return (
-    < div id="current_div" className='relative'>
-      <Chatbot ref={chatbotRef} />
+    < div className={`relative ${review?"":"hidden"}`}>
+      <Chatbot />
       <p className="text-xl font-bold text-center md:text-2xl lg:text-3xl xl:text-4xl">What Our Customer Say</p>
       <p className="text-sm text-center mt-[1vw] md:text-xl">
         Feedback from users. Hear how our food and services made their dining a
@@ -91,16 +89,16 @@ function Review() {
           ))}
         </div>
       </div>
-      <p className="text-xl font-bold text-center md:text-2xl lg:text-3xl xl:text-4xl">Frequently Asked Questions(FAQs)</p>
-      <div className="flex justify-center">
+      <p className="text-xl font-bold text-center mt-20 md:text-2xl lg:text-3xl xl:text-4xl">Frequently Asked Questions(FAQs)</p>
+      <div className="flex justify-center relative">
         <div className="flex flex-wrap gap-5 m-5 lg:w-[1024px] justify-center items-center">
-          {FAQs.map((item)=>(
+          {FAQs.map((item) => (
             <div className="text-left bg-white rounded-lg shadow-lg px-4 py-2 md:w-[46vw] lg:w-[500px]">
               <p className="text-lg mt-[1vw] md:text-xl font-bold">{item.question}</p>
               <p className="text-sm text-justify">{item.answer}</p>
             </div>
           ))}
-      </div>
+        </div>
       </div>
     </div>
   );

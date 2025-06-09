@@ -9,7 +9,8 @@ export const PageProvider = ({ children }) => {
   const [reservation, setReservation] = useState(false);
   const [about, setAbout] = useState(false);
   const [contact, setContact] = useState(false);
-  const [homePage, setHomePage] = useState(false);
+  const [homePage, setHomePage] = useState(true);
+  const [review, setReview] = useState(false)
   const [userbtn, setUserbtn] = useState(false)
   const [scrollTo, setScrollTo] = useState(0)
   const tablebookRef = useRef(null);
@@ -24,9 +25,10 @@ export const PageProvider = ({ children }) => {
         setReservation(false);
         setAbout(false);
         setContact(false);
+        setReview(false)
         if (!menubtn) {
           setHomePage(false);
-        }else {
+        } else {
           setHomePage(true);
         }
         break;
@@ -36,6 +38,7 @@ export const PageProvider = ({ children }) => {
         setReservation(false);
         setAbout(false);
         setContact(false);
+        setReview(false)
         if (!location) {
           setHomePage(false);
         } else {
@@ -48,6 +51,7 @@ export const PageProvider = ({ children }) => {
         setLocation(false);
         setAbout(false);
         setContact(false);
+        setReview(false)
         if (!reservation) {
           setHomePage(false);
         } else {
@@ -60,6 +64,7 @@ export const PageProvider = ({ children }) => {
         setLocation(false);
         setReservation(false);
         setContact(false);
+        setReview(false)
         if (!about) {
           setHomePage(false);
         } else {
@@ -72,7 +77,21 @@ export const PageProvider = ({ children }) => {
         setLocation(false);
         setReservation(false);
         setAbout(false);
+        setReview(false)
         if (!contact) {
+          setHomePage(false);
+        } else {
+          setHomePage(true);
+        }
+        break;
+      case 5:
+        setReview(!review);
+        setMenubtn(false);
+        setLocation(false);
+        setAbout(false);
+        setContact(false);
+        setReservation(false);
+        if (!review) {
           setHomePage(false);
         } else {
           setHomePage(true);
@@ -105,7 +124,9 @@ export const PageProvider = ({ children }) => {
         cateringRef,
         dailylunchRef,
         scrollTo,
-        setScrollTo
+        setScrollTo,
+        review,
+        setReview
       }}
     >
       {children}

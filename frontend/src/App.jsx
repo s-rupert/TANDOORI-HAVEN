@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import data from "./JSON/MonthPick.json";
 import Menupage from "./pages/Menupage";
-import Locationpage from "./pages/Locationpage";
+// import Locationpage from "./pages/Locationpage";
 import { PageContext } from "./components/PageContext";
 import ReservationPage from "./pages/Reservationpage";
 import AboutPage from "./pages/Aboutpage";
@@ -26,21 +26,14 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const {
     menubtn,
-    setMenubtn,
     location,
-    setLocation,
     reservation,
-    setReservation,
     about,
-    setAbout,
     contact,
-    setContact,
     homePage,
-    setHomePage,
     menuHandler,
     userbtn,
     setUserbtn,
-    scrollTo,
     setScrollTo,
   } = useContext(PageContext);
 
@@ -49,16 +42,16 @@ function App() {
     menuHandler(2);
   };
 
+
   return (
     <div
-      className={`bg-amber-50 h-screen w-screen relative overflow-x-hidden ${
-        userbtn ? "overflow-hidden" : ""
-      }`}
+      className={`bg-amber-50 h-auto w-screen relative overflow-x-hidden ${userbtn ? "overflow-hidden" : ""
+        }`}
     >
       {/* Header */}
       <div className="flex justify-between h-35 p-2 h-auto md:relative md:z-10">
         <img
-          loading="lazy"  
+          loading="lazy"
           className="w-[25vw] h-[25vw] ml-5 md:w-[15vw] md:h-[15vw] xl:w-[10vw] xl:h-[10vw]"
           src="/Logo.png"
           alt="logo"
@@ -70,11 +63,10 @@ function App() {
           <Menu size={30} />
         </div>
         <div
-          className={`md:flex md:gap-[1vw] md:mt-[3vw] xl:mt-[2vw] ${
-            menuOpen
+          className={`md:flex md:gap-[1vw] md:mt-[3vw] xl:mt-[2vw] ${menuOpen
               ? "fixed flex w-[50%] flex-col bg-yellow-700 h-[100vh] right-0 top-0 gap-3 z-10 items-center pt-10"
               : "hidden"
-          }`}
+            }`}
         >
           <div
             className="absolute top-2 left-2 md:hidden"
@@ -83,41 +75,36 @@ function App() {
             <X size={30} />
           </div>
           <div
-            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${
-              menubtn ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
-            }`}
+            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${menubtn ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
+              }`}
             onClick={() => menuHandler(0)}
           >
             Menu
           </div>
           <div
-            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${
-              location ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
-            }`}
+            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${location ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
+              }`}
             onClick={() => menuHandler(1)}
           >
             Location
           </div>
           <div
-            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${
-              reservation ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
-            }`}
+            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${reservation ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
+              }`}
             onClick={() => menuHandler(2)}
           >
             Online Reservation
           </div>
           <div
-            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${
-              about ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
-            }`}
+            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${about ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
+              }`}
             onClick={() => menuHandler(3)}
           >
             About Us
           </div>
           <div
-            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${
-              contact ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
-            }`}
+            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${contact ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
+              }`}
             onClick={() => menuHandler(4)}
           >
             Contact
@@ -132,7 +119,7 @@ function App() {
           </div>
           <div
             className="text-white  rounded-full flex items-center h-[7vw] text-lg md:text-xs md:text-yellow-700 md:h-[3vw] lg:text-sm xl:h-[2vw]"
-            onClick={() => {}}
+            onClick={() => { }}
           >
             <ShoppingCart />
           </div>
@@ -212,8 +199,8 @@ function App() {
         </div>
         <div className="overflow-x-scroll w-full h-auto flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
           <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
-            {data.map((item) => (
-              <div className="relative w-45 lg:w-60 xl:w-80">
+            {data.map((item, index) => (
+              <div className="relative w-45 lg:w-60 xl:w-80" key={index}>
                 <img
                   loading="lazy"
                   className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
@@ -375,13 +362,13 @@ function App() {
       </div>
       <Userpage />
       <Menupage />
-      <Locationpage />
+      {/* <Locationpage /> */}
       <ReservationPage />
       <AboutPage />
       <ContactPage />
       <Review />
       {/* Footer */}
-      <div className="bg-yellow-700 text-white flex justify-between mt-10 p-5 gap-5 xl:px-20">
+      <div id="footer" className="bg-yellow-700 text-white flex justify-between mt-10 p-5 gap-5 xl:px-20">
         <div className="flex flex-col items-center gap-2 lg:gap-3">
           <p className="font-bold text-lg">Locations</p>
           <p className="underline">Brampton</p>
@@ -394,7 +381,7 @@ function App() {
           <p>Contact</p>
           <p>About Us</p>
           <p>Locations</p>
-          <p>Testimonials</p>
+          <p onClick={()=>(menuHandler(5))}>Testimonials</p>
           <p>FAQs</p>
         </div>
         <div className="flex flex-col text-center gap-2 hidden lg:flex">

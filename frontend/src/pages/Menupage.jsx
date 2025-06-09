@@ -73,8 +73,8 @@ function Menupage() {
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
         <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
-          {visibleMealData.map((item) => (
-            <div className="relative w-45 lg:w-60 xl:w-80">
+          {visibleMealData.map((item,index) => (
+            <div className="relative w-45 lg:w-60 xl:w-80" key={index}>
               <img
                 loading="lazy"
                 className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
@@ -172,8 +172,8 @@ function Menupage() {
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
         <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
-          {visibleBAData.map((item) => (
-            <div className="relative w-45 lg:w-60 xl:w-80">
+          {visibleBAData.map((item,index) => (
+            <div className="relative w-45 lg:w-60 xl:w-80" key={index}>
               <img
                 loading="lazy"
                 className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
@@ -271,8 +271,8 @@ function Menupage() {
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
         <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
-          {visibleDrinkData.map((item) => (
-            <div className="relative w-45 lg:w-60 xl:w-80">
+          {visibleDrinkData.map((item, index) => (
+            <div className="relative w-45 lg:w-60 xl:w-80" key={index}>
               <img
                 loading="lazy"
                 className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
@@ -370,8 +370,8 @@ function Menupage() {
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
         <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
-          {visibleSDData.map((item) => (
-            <div className="relative w-45 lg:w-60 xl:w-80">
+          {visibleSDData.map((item, index) => (
+            <div className="relative w-45 lg:w-60 xl:w-80" key={index}>
               <img
                 loading="lazy"
                 className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
