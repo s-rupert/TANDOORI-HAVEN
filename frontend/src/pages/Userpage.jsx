@@ -10,7 +10,7 @@ const Userpage = () => {
 
   return (
     <div
-      className={`absolute inset-0 flex items-center justify-center w-full h-full z-20 bg-gray-100/50 overflow-hidden ${
+      className={`fixed inset-0 flex items-center justify-center w-full h-full z-20 bg-gray-100/50 overflow-hidden ${
         userbtn ? "" : "hidden"
       }`}
     >

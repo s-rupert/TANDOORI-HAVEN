@@ -4,244 +4,279 @@
     "price": 11.63,
     "rating": 4.4,
     "ingredients": "Chicken, yogurt, ginger-garlic paste, red chili powder, garam masala, lemon juice, mustard oil",
-    "image": "/mealimg/tandoori_chicken.jpg"
+    "image": "/mealimg/tandoori_chicken.jpg",
+    "id":"M1"
   },
   {
     "name": "Paneer Tikka (Tandoori)",
     "price": 13.45,
     "rating": 4.6,
     "ingredients": "Paneer cubes, yogurt, turmeric, red chili, chaat masala, bell peppers, onions",
-    "image": "/mealimg/paneer_tikka.jpg"
+    "image": "/mealimg/paneer_tikka.jpg",
+    "id":"M2"
   },
   {
     "name": "Butter Chicken",
     "price": 15.86,
     "rating": 4.3,
     "ingredients": "Chicken, butter, cream, tomatoes, cashew paste, ginger-garlic, fenugreek leaves, spices",
-    "image": "/mealimg/butter_chicken.jpg"
+    "image": "/mealimg/butter_chicken.jpg",
+    "id":"M3"
   },
   {
     "name": "Masala Dosa",
     "price": 13.92,
     "rating": 4.2,
     "ingredients": "Fermented rice and urad dal batter, mashed spiced potatoes, mustard seeds, curry leaves",
-    "image": "/mealimg/masala_dosa.jpg"
+    "image": "/mealimg/masala_dosa.jpg",
+    "id":"M4"
   },
   {
     "name": "Biryani (Hyderabadi Mutton)",
     "price": 12.01,
     "rating": 4.4,
     "ingredients": "Basmati rice, marinated mutton, saffron, fried onions, mint, yogurt, garam masala",
-    "image": "/mealimg/mutton_biryani.jpg"
+    "image": "/mealimg/mutton_biryani.jpg",
+    "id":"M5"
   },
   {
     "name": "Chole Bhature",
     "price": 9.67,
     "rating": 4.4,
     "ingredients": "Chickpeas, tomatoes, onions, ginger, spices, bhature (fried bread)",
-    "image": "/mealimg/chole_bhature.jpg"
+    "image": "/mealimg/chole_bhature.jpg",
+    "id":"M6"
   },
   {
     "name": "Rogan Josh",
     "price": 8.95,
     "rating": 4.3,
     "ingredients": "Lamb, yogurt, Kashmiri red chili, fennel seeds, dry ginger, cardamom, cinnamon",
-    "image": "/mealimg/rogan_josh.jpg"
+    "image": "/mealimg/rogan_josh.jpg",
+    "id":"M7"
   },
   {
     "name": "Palak Paneer",
     "price": 9.88,
     "rating": 4.2,
     "ingredients": "Spinach puree, paneer cubes, garlic, green chilies, cream, cumin, garam masala",
-    "image": "/mealimg/palak_paneer.jpg"
+    "image": "/mealimg/palak_paneer.jpg",
+    "id":"M8"
   },
   {
     "name": "Chicken Chettinad",
     "price": 12.03,
     "rating": 4.3,
     "ingredients": "Chicken, coconut, poppy seeds, curry leaves, fennel seeds, red chilies",
-    "image": "/mealimg/chicken_chettinad.jpg"
+    "image": "/mealimg/chicken_chettinad.jpg",
+    "id":"M9"
   },
   {
     "name": "Chicken Korma",
     "price": 13.12,
     "rating": 4.3,
     "ingredients": "Chicken, yogurt, cream, cashew nuts, cardamom, saffron",
-    "image": "/mealimg/chicken_korma.jpg"
+    "image": "/mealimg/chicken_korma.jpg",
+    "id":"M10"
   },
   {
     "name": "Fish Curry (Goan Style)",
     "price": 14.68,
     "rating": 4.6,
     "ingredients": "Fish, coconut milk, kokum, curry leaves, mustard seeds, red chili",
-    "image": "/mealimg/fish_curry_goan_style.jpg"
+    "image": "/mealimg/fish_curry_goan_style.jpg",
+    "id":"M11"
   },
   {
     "name": "Keema Matar",
     "price": 14.39,
     "rating": 4.5,
     "ingredients": "Minced lamb, green peas, ginger, garlic, tomatoes, garam masala",
-    "image": "/mealimg/keema_matar.jpg"
+    "image": "/mealimg/keema_matar.jpg",
+    "id":"M12"
   },
   {
     "name": "Mutton Curry (Bengali)",
     "price": 10.04,
     "rating": 4.5,
     "ingredients": "Mutton, potatoes, mustard oil, bay leaves, cumin, garam masala",
-    "image": "/mealimg/mutton_curry_bengali.jpg"
+    "image": "/mealimg/mutton_curry_bengali.jpg",
+    "id":"M13"
   },
   {
     "name": "Chicken 65",
     "price": 10.98,
     "rating": 4.4,
     "ingredients": "Boneless chicken, yogurt, red chili paste, curry leaves, garlic",
-    "image": "/mealimg/chicken_65.jpg"
+    "image": "/mealimg/chicken_65.jpg",
+    "id":"M14"
   },
   {
     "name": "Prawn Masala",
     "price": 12.52,
     "rating": 4.5,
     "ingredients": "Prawns, onions, tomatoes, ginger-garlic, mustard seeds",
-    "image": "/mealimg/prawn_masala.jpg"
+    "image": "/mealimg/prawn_masala.jpg",
+    "id":"M15"
   },
   {
     "name": "Nihari",
     "price": 13.2,
     "rating": 4.6,
     "ingredients": "Beef or lamb, bone marrow, slow-cooked spices, ginger, fried onions",
-    "image": "/mealimg/nihari.jpg"
+    "image": "/mealimg/nihari.jpg",
+    "id":"M16"
   },
   {
     "name": "Chicken Handi",
     "price": 13.79,
     "rating": 4.3,
     "ingredients": "Chicken, cream, yogurt, cashew paste, spices, coriander",
-    "image": "/mealimg/chicken_handi.jpg"
+    "image": "/mealimg/chicken_handi.jpg",
+    "id":"M17"
   },
   {
     "name": "Kerala Fish Fry",
     "price": 15.3,
     "rating": 4.5,
     "ingredients": "Fish fillets, red chili, black pepper, curry leaves, coconut oil",
-    "image": "/mealimg/kerala_fish_fry.jpg"
+    "image": "/mealimg/kerala_fish_fry.jpg",
+    "id":"M18"
   },
   {
     "name": "Egg Curry",
     "price": 11.4,
     "rating": 4.2,
     "ingredients": "Boiled eggs, onions, tomatoes, mustard seeds, curry leaves",
-    "image": "/mealimg/egg_curry.jpg"
+    "image": "/mealimg/egg_curry.jpg",
+    "id":"M19"
   },
   {
     "name": "Mutton Do Pyaza",
     "price": 12.63,
     "rating": 4.5,
     "ingredients": "Mutton, double onions, garlic, spices, coriander",
-    "image": "/mealimg/mutton_do_pyaza.jpg"
+    "image": "/mealimg/mutton_do_pyaza.jpg",
+    "id":"M20"
   },
   {
     "name": "Chicken Tikka Masala",
     "price": 14.78,
     "rating": 4.6,
     "ingredients": "Grilled chicken, tomato cream sauce, ginger-garlic, fenugreek",
-    "image": "/mealimg/chicken_tikka_masala.jpg"
+    "image": "/mealimg/chicken_tikka_masala.jpg",
+    "id":"M21"
   },
   {
     "name": "Laal Maas",
     "price": 13.56,
     "rating": 4.4,
     "ingredients": "Mutton, dry red chilies, yogurt, garlic, mustard oil",
-    "image": "/mealimg/laal_maas.jpg"
+    "image": "/mealimg/laal_maas.jpg",
+    "id":"M22"
   },
   {
     "name": "Shahi Paneer",
     "price": 13.32,
     "rating": 4.7,
     "ingredients": "Paneer, cream, tomato puree, cashew paste, garam masala",
-    "image": "/mealimg/shahi_paneer.jpg"
+    "image": "/mealimg/shahi_paneer.jpg",
+    "id":"M23"
   },
   {
     "name": "Rajma",
     "price": 11.97,
     "rating": 4.3,
     "ingredients": "Red kidney beans, onions, tomatoes, cumin, garam masala",
-    "image": "/mealimg/rajma.jpg"
+    "image": "/mealimg/rajma.jpg",
+    "id":"M24"
   },
   {
     "name": "Aloo Gobi",
     "price": 10.57,
     "rating": 4.3,
     "ingredients": "Potatoes, cauliflower, turmeric, cumin, tomatoes",
-    "image": "/mealimg/aloo_gobi.jpg"
+    "image": "/mealimg/aloo_gobi.jpg",
+    "id":"M25"
   },
    {
     "name": "Vegetable Biryani",
     "price": 11.50,
     "rating": 4.3,
     "ingredients": "Basmati rice, mixed vegetables, yogurt, saffron, fried onions, garam masala",
-    "image": "/mealimg/vegetable_biryani.jpg"
+    "image": "/mealimg/vegetable_biryani.jpg",
+    "id":"M26"
   },
   {
     "name": "Bhindi Masala",
     "price": 9.40,
     "rating": 4.2,
     "ingredients": "Okra, onions, tomatoes, mustard seeds, spices",
-    "image": "/mealimg/bhindi_masala.jpg"
+    "image": "/mealimg/bhindi_masala.jpg",
+    "id":"M27"
   },
   {
     "name": "Baingan Bharta",
     "price": 10.20,
     "rating": 4.3,
     "ingredients": "Roasted eggplant, onions, tomatoes, garlic, green chilies",
-    "image": "/mealimg/baingan_bharta.jpg"
+    "image": "/mealimg/baingan_bharta.jpg",
+    "id":"M28"
   },
   {
     "name": "Kadhai Pakora",
     "price": 9.90,
     "rating": 4.1,
     "ingredients": "Gram flour, yogurt, pakoras, curry leaves, turmeric",
-    "image": "/mealimg/kadhai_pakora.jpg"
+    "image": "/mealimg/kadhai_pakora.jpg",
+    "id":"M29"
   },
   {
     "name": "Dal Tadka",
     "price": 8.75,
     "rating": 4.4,
     "ingredients": "Toor dal, garlic, cumin seeds, red chilies, ghee",
-    "image": "/mealimg/dal_tadka.jpg"
+    "image": "/mealimg/dal_tadka.jpg",
+    "id":"M30"
   },
   {
     "name": "Dal Makhani",
     "price": 9.95,
     "rating": 4.6,
     "ingredients": "Black urad dal, kidney beans, butter, cream, tomatoes",
-    "image": "/mealimg/dal_makhani.jpg"
+    "image": "/mealimg/dal_makhani.jpg",
+    "id":"M31"
   },
   {
     "name": "Mix Veg Curry",
     "price": 10.10,
     "rating": 4.3,
     "ingredients": "Carrots, peas, beans, potatoes, tomatoes, spices",
-    "image": "/mealimg/mix_veg_curry.jpg"
+    "image": "/mealimg/mix_veg_curry.jpg",
+    "id":"M32"
   },
   {
     "name": "Pav Bhaji",
     "price": 8.50,
     "rating": 4.5,
     "ingredients": "Mashed vegetables, butter, pav bread, onions, lemon",
-    "image": "/mealimg/pav_bhaji.jpg"
+    "image": "/mealimg/pav_bhaji.jpg",
+    "id":"M33"
   },
   {
     "name": "Veg Kurma",
     "price": 9.80,
     "rating": 4.2,
     "ingredients": "Mixed vegetables, coconut, cashews, spices, poppy seeds",
-    "image": "/mealimg/veg_kurma.jpg"
+    "image": "/mealimg/veg_kurma.jpg",
+    "id":"M34"
   },
   {
     "name": "Paneer Butter Masala",
     "price": 12.25,
     "rating": 4.7,
     "ingredients": "Paneer, butter, cream, tomato gravy, kasuri methi",
-    "image": "/mealimg/paneer_butter_masala.png"
+    "image": "/mealimg/paneer_butter_masala.png",
+    "id":"M35"
   }
 ]

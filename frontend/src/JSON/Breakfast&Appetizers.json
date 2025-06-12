@@ -4,111 +4,127 @@
     "price": 3.50,
     "rating": 4.7,
     "ingredients": "Potatoes, peas, spices, wheat flour",
-    "image": "/baimg/samosa.jpg"
+    "image": "/baimg/samosa.jpg",
+    "id": "B1"
   },
   {
     "name": "Paneer Tikka",
     "price": 8.00,
     "rating": 4.6,
     "ingredients": "Paneer, yogurt, spices, bell peppers, onions",
-    "image": "/baimg/paneer_tikka.jpg"
+    "image": "/baimg/paneer_tikka.jpg",
+    "id": "B2"
   },
   {
     "name": "Pani Puri",
     "price": 4.00,
     "rating": 4.8,
     "ingredients": "Semolina puris, tamarind water, chickpeas, potatoes",
-    "image": "/baimg/pani_puri.jpg"
+    "image": "/baimg/pani_puri.jpg",
+    "id": "B3"
   },
   {
     "name": "Aloo Tikki",
     "price": 3.80,
     "rating": 4.5,
     "ingredients": "Potatoes, peas, spices, breadcrumbs",
-    "image": "/baimg/aloo_tikki.jpg"
+    "image": "/baimg/aloo_tikki.jpg",
+    "id": "B4"
   },
   {
     "name": "Papdi Chaat",
     "price": 5.00,
     "rating": 4.6,
     "ingredients": "Crispy wafers, yogurt, tamarind chutney, chickpeas",
-    "image": "/baimg/papdi_chaat.jpg"
+    "image": "/baimg/papdi_chaat.jpg",
+    "id": "B5"
   },
   {
     "name": "Dahi Puri",
     "price": 4.20,
     "rating": 4.7,
     "ingredients": "Puri, yogurt, chutneys, spices",
-    "image": "/baimg/dahi_puri.jpg"
+    "image": "/baimg/dahi_puri.jpg",
+    "id": "B6"
   },
   {
     "name": "Vada Pav",
     "price": 3.00,
     "rating": 4.5,
     "ingredients": "Potato fritter, pav bread, chutneys",
-    "image": "/baimg/vada_pav.jpg"
+    "image": "/baimg/vada_pav.jpg",
+    "id": "B7"
   },
   {
     "name": "Bhel Puri",
     "price": 4.50,
     "rating": 4.7,
     "ingredients": "Puffed rice, sev, onions, tomatoes, tamarind chutney",
-    "image": "/baimg/bhel_puri.jpg"
+    "image": "/baimg/bhel_puri.jpg",
+    "id": "B8"
   },
   {
     "name": "Kachori",
     "price": 3.70,
     "rating": 4.4,
     "ingredients": "Flour shell, spiced lentil filling",
-    "image": "/baimg/kachori.jpg"
+    "image": "/baimg/kachori.jpg",
+    "id": "B9"
   },
   {
     "name": "Sev Puri",
     "price": 4.30,
     "rating": 4.6,
     "ingredients": "Puri, sev, potatoes, chutneys, onions",
-    "image": "/baimg/sev_puri.jpg"
+    "image": "/baimg/sev_puri.jpg",
+    "id": "B10"
   },
   {
     "name": "Chicken Tikka",
     "price": 9.50,
     "rating": 4.7,
     "ingredients": "Chicken, yogurt, spices, lemon juice",
-    "image": "/baimg/chicken_tikka.jpg"
+    "image": "/baimg/chicken_tikka.jpg",
+    "id": "B11"
   },
   {
     "name": "Fish Amritsari",
     "price": 10.00,
     "rating": 4.6,
     "ingredients": "Fish fillets, gram flour, spices, lemon",
-    "image": "/baimg/fish_amritsari.jpg"
+    "image": "/baimg/fish_amritsari.jpg",
+    "id": "B12"
   },
   {
     "name": "Chili Paneer",
     "price": 8.50,
     "rating": 4.7,
     "ingredients": "Paneer, bell peppers, chili sauce, soy sauce",
-    "image": "/baimg/chili_paneer.jpg"
+    "image": "/baimg/chili_paneer.jpg",
+    "id": "B13"
   },
   {
     "name": "Idli Fry",
     "price": 4.50,
     "rating": 4.3,
     "ingredients": "Steamed idli, spices, gram flour batter",
-    "image": "/baimg/idli_fry.png"
+    "image": "/baimg/idli_fry.png",
+    "id": "B14"
   },
   {
     "name": "Gobi Manchurian",
     "price": 7.00,
     "rating": 4.6,
     "ingredients": "Cauliflower, soy sauce, garlic, green chilies",
-    "image": "/baimg/gobi_manchurian.jpg"
+    "image": "/baimg/gobi_manchurian.jpg",
+    "id": "B15"
   },
   {
     "name": "Momos",
     "price": 6.50,
     "rating": 4.7,
     "ingredients": "Flour dough, cabbage, carrots, spices",
-    "image": "/baimg/momos.jpg"
+    "image": "/baimg/momos.jpg",
+    "id": "B16"
   }
 ]

@@ -1,11 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { PageContext } from "../components/PageContext";
 
 const AboutPage = () => {
-  const { about, setAbout } = useContext(PageContext);
+  const { menuHandler, scrollTo } = useContext(PageContext);
+  useEffect(()=>{
+    menuHandler(3)
+    if (scrollTo === 10) {
+      window.location.reload();
+    }
+  })
 
   return (
-    <div className={`${about ? "block" : "hidden"} p-4`}>
+    <div className="p-4">
       <p className="text-center text-lg mx-[2vw] md:text-xl lg:text-2xl xl:text-2xl font-bold mt-10 relative z-2">
         At Tandoori Haven, we’re passionate about bringing the rich and diverse
         flavors of Indian cuisine to Canada. With locations in Toronto,

@@ -1,12 +1,34 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import LocationMap from "../components/LocationMap";
 import { Mail, Phone } from "lucide-react";
 import { PageContext } from "../components/PageContext";
 
 const LocationPage = () => {
-  const { location, setLocation } = useContext(PageContext);
+  const {
+    menuHandler,
+    locBramptonRef,
+    locMississaugaRef,
+    locOakvilleRef,
+    locScarboroughRef,
+    scrollTo,
+  } = useContext(PageContext);
+
+  useEffect(() => {
+    menuHandler(1);
+    if (scrollTo === 4) {
+      locBramptonRef.current?.scrollIntoView({ behavior: "smooth" });
+    } else if (scrollTo === 5) {
+      locMississaugaRef.current?.scrollIntoView({ behavior: "smooth" });
+    } else if (scrollTo === 6) {
+      locScarboroughRef.current?.scrollIntoView({ behavior: "smooth" });
+    } else if (scrollTo === 7) {
+      locOakvilleRef.current?.scrollIntoView({ behavior: "smooth" });
+    }else if (scrollTo === 10) {
+      window.location.reload();
+    }
+  });
   return (
-    <div className={`${location ? "block" : "hidden"}`}>
+    <div>
       <p className="font-bold text-center text-xl md:text-2xl lg:text-3xl xl:text-4xl">
         Our Locations & Operating Hours
       </p>
@@ -35,7 +57,7 @@ const LocationPage = () => {
         />
       </div>
       {/* location */}
-      <div>
+      <div ref={locBramptonRef}>
         <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
           <img
             loading="lazy"
@@ -84,7 +106,7 @@ const LocationPage = () => {
           <LocationMap />
         </div>
       </div>
-      <div>
+      <div ref={locMississaugaRef}>
         <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
           <img
             loading="lazy"
@@ -133,7 +155,7 @@ const LocationPage = () => {
           <LocationMap />
         </div>
       </div>
-      <div>
+      <div ref={locScarboroughRef}>
         <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
           <img
             loading="lazy"
@@ -182,7 +204,7 @@ const LocationPage = () => {
           <LocationMap />
         </div>
       </div>
-      <div>
+      <div ref={locOakvilleRef}>
         <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
           <img
             loading="lazy"

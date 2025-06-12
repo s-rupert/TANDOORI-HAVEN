@@ -2,29 +2,24 @@ import React, { useContext, useRef, useEffect } from "react";
 import { PageContext } from "../components/PageContext";
 
 const ReservationPage = () => {
-  const {
-    reservation,
-    setReservation,
-    tablebookRef,
-    cateringRef,
-    dailylunchRef,
-    scrollTo,
-    setScrollTo,
-  } = useContext(PageContext);
+  const { tablebookRef, cateringRef, dailylunchRef, scrollTo, menuHandler } =
+    useContext(PageContext);
 
   useEffect(() => {
-  if (scrollTo === 1) {
-    tablebookRef.current?.scrollIntoView({ behavior: "smooth" });
-  } else if (scrollTo === 2) {
-    cateringRef.current?.scrollIntoView({ behavior: "smooth" });
-  } else if (scrollTo === 3) {
-    dailylunchRef.current?.scrollIntoView({ behavior: "smooth" });
-  }
-}, [scrollTo]);
-
+    menuHandler(2);
+    if (scrollTo === 1) {
+      tablebookRef.current?.scrollIntoView({ behavior: "smooth" });
+    } else if (scrollTo === 2) {
+      cateringRef.current?.scrollIntoView({ behavior: "smooth" });
+    } else if (scrollTo === 3) {
+      dailylunchRef.current?.scrollIntoView({ behavior: "smooth" });
+    } else if (scrollTo === 10) {
+      window.location.reload();
+    }
+  }, [scrollTo]);
 
   return (
-    <div className={`m-2 ${reservation ? "block" : "hidden"}`}>
+    <div className="m-2">
       <p className="font-bold text-center text-xl md:text-2xl lg:text-3xl xl:text-4xl">
         Make a Reservation or Place an Order
       </p>
@@ -35,17 +30,20 @@ const ReservationPage = () => {
         ease, just let us know your needs, and we'll take care of the rest.
       </p>
       <div>
-        <img loading="lazy"
+        <img
+          loading="lazy"
           className="absolute -top-10 opacity-50 left-30 w-[22vw] md:left-[20vw]  z-1 xl:w-[15vw]"
           src="/12.png"
           alt=""
         />
-        <img loading="lazy"
+        <img
+          loading="lazy"
           className="absolute opacity-50 top-15 right-20 w-[20vw] z-1 xl:w-[10vw]"
           src="/13.png"
           alt=""
         />
-        <img loading="lazy"
+        <img
+          loading="lazy"
           className="absolute opacity-50 top-[50vw] w-[15vw] z-1 md:top-[15vw] xl:w-[10vw]  xl:top-[15vw]"
           src="/14.png"
           alt=""
@@ -55,7 +53,8 @@ const ReservationPage = () => {
         {/* table reservation form */}
         <div ref={tablebookRef} className="flex flex-col justify-center">
           <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
-            <img loading="lazy"
+            <img
+              loading="lazy"
               className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
               src="/Lleft.png"
               alt="Line Left"
@@ -63,7 +62,8 @@ const ReservationPage = () => {
             <p className="text-lg text-yellow-700 font-semibold h-15 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
               Table Reservation
             </p>
-            <img loading="lazy"
+            <img
+              loading="lazy"
               className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
               src="/Lright.png"
               alt="Line Right"
@@ -155,7 +155,8 @@ const ReservationPage = () => {
         {/* Catering for Gathering */}
         <div ref={cateringRef} className="flex flex-col justify-center">
           <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
-            <img loading="lazy"
+            <img
+              loading="lazy"
               className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
               src="/Lleft.png"
               alt="Line Left"
@@ -163,7 +164,8 @@ const ReservationPage = () => {
             <p className="text-lg text-yellow-700 font-semibold h-15 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
               Catering for Gatherings
             </p>
-            <img loading="lazy"
+            <img
+              loading="lazy"
               className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
               src="/Lright.png"
               alt="Line Right"
@@ -255,7 +257,8 @@ const ReservationPage = () => {
         {/* Daily lunches */}
         <div ref={dailylunchRef} className="flex flex-col justify-center">
           <div className="flex justify-between w-screen items-center overflow-hidden mt-20 lg:h-[10vw] xl:mt-0">
-            <img loading="lazy"
+            <img
+              loading="lazy"
               className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
               src="/Lleft.png"
               alt="Line Left"
@@ -263,7 +266,8 @@ const ReservationPage = () => {
             <p className="text-lg text-yellow-700 font-semibold h-15 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
               Daily Lunches
             </p>
-            <img loading="lazy"
+            <img
+              loading="lazy"
               className="w-[25%] -mt-5 rotate-[2deg] lg:w-[30%]"
               src="/Lright.png"
               alt="Line Right"

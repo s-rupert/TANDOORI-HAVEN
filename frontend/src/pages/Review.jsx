@@ -1,11 +1,10 @@
-import React, { useEffect, useContext, useState} from "react";
+import React, { useEffect, useContext } from "react";
 import Reviewdata from "../JSON/Reviews.json";
-import FAQs from "../JSON/FAQs.json"
+import FAQs from "../JSON/FAQs.json";
 import Chatbot from "../components/Chatbot";
 import { PageContext } from "../components/PageContext";
 
 function Review() {
-  const { review, setReview } = useContext(PageContext);
   const lightColors = [
     "#FCE4EC", // light pink
     "#FFF3E0", // light orange
@@ -23,14 +22,20 @@ function Review() {
     "#F3E5F5", // light lavender
     "#FFF8E1", // light cream
   ];
-
-  
-
+  const { menuHandler, scrollTo } = useContext(PageContext);
+  useEffect(() => {
+    menuHandler(10);
+    if (scrollTo === 10) {
+      window.location.reload();
+    }
+  });
 
   return (
-    < div className={`relative ${review?"":"hidden"}`}>
+    <div className="relative">
       <Chatbot />
-      <p className="text-xl font-bold text-center md:text-2xl lg:text-3xl xl:text-4xl">What Our Customer Say</p>
+      <p className="text-xl font-bold text-center md:text-2xl lg:text-3xl xl:text-4xl">
+        What Our Customer Say
+      </p>
       <p className="text-sm text-center mt-[1vw] md:text-xl">
         Feedback from users. Hear how our food and services made their dining a
         better experience.
@@ -89,12 +94,16 @@ function Review() {
           ))}
         </div>
       </div>
-      <p className="text-xl font-bold text-center mt-20 md:text-2xl lg:text-3xl xl:text-4xl">Frequently Asked Questions(FAQs)</p>
+      <p className="text-xl font-bold text-center mt-20 md:text-2xl lg:text-3xl xl:text-4xl">
+        Frequently Asked Questions(FAQs)
+      </p>
       <div className="flex justify-center relative">
         <div className="flex flex-wrap gap-5 m-5 lg:w-[1024px] justify-center items-center">
           {FAQs.map((item) => (
             <div className="text-left bg-white rounded-lg shadow-lg px-4 py-2 md:w-[46vw] lg:w-[500px]">
-              <p className="text-lg mt-[1vw] md:text-xl font-bold">{item.question}</p>
+              <p className="text-lg mt-[1vw] md:text-xl font-bold">
+                {item.question}
+              </p>
               <p className="text-sm text-justify">{item.answer}</p>
             </div>
           ))}

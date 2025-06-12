@@ -9,93 +9,64 @@ export const PageProvider = ({ children }) => {
   const [reservation, setReservation] = useState(false);
   const [about, setAbout] = useState(false);
   const [contact, setContact] = useState(false);
-  const [homePage, setHomePage] = useState(true);
-  const [review, setReview] = useState(false)
-  const [userbtn, setUserbtn] = useState(false)
-  const [scrollTo, setScrollTo] = useState(0)
+  const [userbtn, setUserbtn] = useState(false);
+  const [scrollTo, setScrollTo] = useState(0);
   const tablebookRef = useRef(null);
   const cateringRef = useRef(null);
   const dailylunchRef = useRef(null);
+  const locBramptonRef =useRef(null);
+  const locMississaugaRef =useRef(null);
+  const locOakvilleRef =useRef(null);
+  const locScarboroughRef =useRef(null);
+  const contactRef = useRef(null)
 
   const menuHandler = (num) => {
     switch (num) {
       case 0:
-        setMenubtn(!menubtn);
+        setMenubtn(true);
         setLocation(false);
         setReservation(false);
         setAbout(false);
         setContact(false);
-        setReview(false)
-        if (!menubtn) {
-          setHomePage(false);
-        } else {
-          setHomePage(true);
-        }
+
         break;
       case 1:
-        setLocation(!location);
+        setLocation(true);
         setMenubtn(false);
         setReservation(false);
         setAbout(false);
         setContact(false);
-        setReview(false)
-        if (!location) {
-          setHomePage(false);
-        } else {
-          setHomePage(true);
-        }
         break;
       case 2:
-        setReservation(!reservation);
+        setReservation(true);
         setMenubtn(false);
         setLocation(false);
         setAbout(false);
         setContact(false);
-        setReview(false)
-        if (!reservation) {
-          setHomePage(false);
-        } else {
-          setHomePage(true);
-        }
         break;
       case 3:
-        setAbout(!about);
+        setAbout(true);
         setMenubtn(false);
         setLocation(false);
         setReservation(false);
         setContact(false);
-        setReview(false)
-        if (!about) {
-          setHomePage(false);
-        } else {
-          setHomePage(true);
-        }
+
         break;
       case 4:
-        setContact(!contact);
+        setContact(true);
         setMenubtn(false);
         setLocation(false);
         setReservation(false);
         setAbout(false);
-        setReview(false)
-        if (!contact) {
-          setHomePage(false);
-        } else {
-          setHomePage(true);
-        }
+
+
         break;
-      case 5:
-        setReview(!review);
+      case 10:
+        setContact(false);
         setMenubtn(false);
         setLocation(false);
-        setAbout(false);
-        setContact(false);
         setReservation(false);
-        if (!review) {
-          setHomePage(false);
-        } else {
-          setHomePage(true);
-        }
+        setAbout(false);
         break;
       default:
         break;
@@ -116,8 +87,6 @@ export const PageProvider = ({ children }) => {
         contact,
         setContact,
         menuHandler,
-        homePage,
-        setHomePage,
         userbtn,
         setUserbtn,
         tablebookRef,
@@ -125,8 +94,11 @@ export const PageProvider = ({ children }) => {
         dailylunchRef,
         scrollTo,
         setScrollTo,
-        review,
-        setReview
+        locBramptonRef,
+        locMississaugaRef,
+        locOakvilleRef,
+        locScarboroughRef,
+        contactRef
       }}
     >
       {children}

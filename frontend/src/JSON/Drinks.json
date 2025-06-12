@@ -4,160 +4,183 @@
       "price": 2.00,
       "rating": 4.7,
       "ingredients": "Black tea, milk, sugar, ginger, cardamom, cloves, cinnamon",
-      "image": "/drinkimg/masala_chai.jpg"
+      "image": "/drinkimg/masala_chai.jpg",
+      "id": "D1"
     },
     {
       "name": "Lassi",
       "price": 3.00,
       "rating": 4.6,
       "ingredients": "Yogurt, sugar, cardamom, rose water",
-      "image": "/drinkimg/lassi.jpg"
+      "image": "/drinkimg/lassi.jpg",
+      "id": "D2"
     },
     {
       "name": "Nimbu Pani",
       "price": 1.50,
       "rating": 4.3,
       "ingredients": "Lemon juice, water, sugar, salt, black salt",
-      "image": "/drinkimg/nimbu_pani.jpg"
+      "image": "/drinkimg/nimbu_pani.jpg",
+      "id": "D3"
     },
     {
       "name": "Jaljeera",
       "price": 2.00,
       "rating": 4.4,
       "ingredients": "Water, cumin, mint, black salt, tamarind",
-      "image": "/drinkimg/jaljeera.jpg"
+      "image": "/drinkimg/jaljeera.jpg",
+      "id": "D4"
     },
     {
       "name": "Sol Kadhi",
       "price": 3.00,
       "rating": 4.2,
       "ingredients": "Coconut milk, kokum, cumin, green chili",
-      "image": "/drinkimg/sol_kadhai.jpg"
+      "image": "/drinkimg/sol_kadhai.jpg",
+      "id": "D5"
     },
     {
       "name": "Badam Milk",
       "price": 3.50,
       "rating": 4.5,
       "ingredients": "Milk, almonds, saffron, cardamom, sugar",
-      "image": "/drinkimg/badam_milk.jpg"
+      "image": "/drinkimg/badam_milk.jpg",
+      "id": "D6"
     },
     {
       "name": "Aam Panna",
       "price": 2.50,
       "rating": 4.3,
       "ingredients": "Raw mango, mint, cumin, black salt, sugar",
-      "image": "/drinkimg/aam_panna.jpg"
+      "image": "/drinkimg/aam_panna.jpg",
+      "id": "D7"
     },
     {
       "name": "Rose Sharbat",
       "price": 2.00,
       "rating": 4.4,
       "ingredients": "Rose syrup, water, sugar, lemon",
-      "image": "/drinkimg/rose_sharbat.jpg"
+      "image": "/drinkimg/rose_sharbat.jpg",
+      "id": "D8"
     },
      {
       "name": "Coca-Cola",
       "price": 1.50,
       "rating": 4.0,
       "ingredients": "Carbonated water, sugar, caffeine",
-      "image": "/drinkimg/coca_cola.jpg"
+      "image": "/drinkimg/coca_cola.jpg",
+      "id": "D9"
     },
     {
       "name": "Pepsi",
       "price": 1.50,
       "rating": 4.0,
       "ingredients": "Carbonated water, sugar, caffeine",
-      "image": "/drinkimg/pepsi.jpg"
+      "image": "/drinkimg/pepsi.jpg",
+      "id": "D10"
     },
     {
       "name": "Red Bull",
       "price": 3.00,
       "rating": 4.2,
       "ingredients": "Carbonated water, caffeine, taurine, sugar",
-      "image": "/drinkimg/red_bull.jpg"
+      "image": "/drinkimg/red_bull.jpg",
+      "id": "D11"
     },
     {
       "name": "Cold Coffee",
       "price": 2.50,
       "rating": 4.3,
       "ingredients": "Coffee, milk, sugar, ice",
-      "image": "/drinkimg/cold_coffee.jpg"
+      "image": "/drinkimg/cold_coffee.jpg",
+      "id": "D12"
     },
     {
       "name": "Ice Tea",
       "price": 2.00,
       "rating": 4.0,
       "ingredients": "Tea, lemon, sugar, ice",
-      "image": "/drinkimg/ice_tea.jpg"
+      "image": "/drinkimg/ice_tea.jpg",
+      "id": "D13"
     },
     {
     "name": "Bintang",
     "price": 2.50,
     "rating": 4.1,
     "ingredients": "Water, malted barley, corn, hops, yeast",
-    "image": "/drinkimg/bintang.jpg"
+    "image": "/drinkimg/bintang.jpg",
+    "id": "D14"
   },
   {
     "name": "Labatt Blue",
     "price": 2.50,
     "rating": 4.0,
     "ingredients": "Water, malted barley, corn, hops, yeast",
-    "image": "/drinkimg/labatt_blue.jpg"
+    "image": "/drinkimg/labatt_blue.jpg",
+    "id": "D15"
   },
   {
     "name": "Steam Whistle Pilsner",
     "price": 3.00,
     "rating": 4.3,
     "ingredients": "Spring water, malted barley, hops, yeast",
-    "image": "/drinkimg/steam_whistle_pilsner.jpg"
+    "image": "/drinkimg/steam_whistle_pilsner.jpg",
+    "id": "D16"
   },
   {
     "name": "La Fin du Monde",
     "price": 4.00,
     "rating": 4.5,
     "ingredients": "Water, malted barley, hops, yeast, spices",
-    "image": "/drinkimg/la_fin_du_monde.jpg"
+    "image": "/drinkimg/la_fin_du_monde.jpg",
+    "id": "D17"
   },
   {
     "name": "Peller Estates Icewine",
     "price": 30.00,
     "rating": 4.7,
     "ingredients": "Vidal grapes",
-    "image": "/drinkimg/peller_estates_icewine.jpg"
+    "image": "/drinkimg/peller_estates_icewine.jpg",
+    "id": "D18"
   },
   {
     "name": "Wayne Gretzky No. 99 Red Cask Whisky",
     "price": 35.00,
     "rating": 4.6,
     "ingredients": "Canadian whisky aged in red wine casks",
-    "image": "/drinkimg/peller_estates_icewine.jpg"
+    "image": "/drinkimg/peller_estates_icewine.jpg",
+    "id": "D19"
   },
   {
     "name": "Crown Royal Canadian Whisky",
     "price": 40.00,
     "rating": 4.8,
     "ingredients": "Blend of Canadian whiskies",
-    "image": "/drinkimg/peller_estates_icewine.jpg"
+    "image": "/drinkimg/peller_estates_icewine.jpg",
+    "id": "D20"
   },
   {
     "name": "Canadian Club 100% Rye",
     "price": 30.00,
     "rating": 4.4,
     "ingredients": "100% rye grain whisky",
-    "image": "/drinkimg/peller_estates_icewine.jpg"
+    "image": "/drinkimg/peller_estates_icewine.jpg",
+    "id": "D21"
   },
   {
     "name": "Inniskillin Vidal Icewine",
     "price": 45.00,
     "rating": 4.9,
     "ingredients": "Vidal grapes",
-    "image": "/drinkimg/peller_estates_icewine.jpg"
+    "image": "/drinkimg/peller_estates_icewine.jpg",
+    "id": "D22"
   },
   {
     "name": "Alexander Keith's India Pale Ale",
     "price": 2.75,
     "rating": 4.2,
     "ingredients": "Water, malted barley, hops, yeast",
-    "image": "/drinkimg/peller_estates_icewine.jpg"
+    "image": "/drinkimg/peller_estates_icewine.jpg",
+    "id": "D23"
   }
   ]

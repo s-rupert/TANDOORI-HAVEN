@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   Star,
   StarHalf,
@@ -15,7 +15,7 @@ import drinkdata from "../JSON/Drinks.json";
 import { PageContext } from "../components/PageContext";
 
 function Menupage() {
-  const { menubtn, setMenubtn } = useContext(PageContext);
+  const { menubtn, setMenubtn, menuHandler } = useContext(PageContext);
   const [mealSM, setMealSM] = useState(false);
   const [baSM, setBASM] = useState(false);
   const [drinkSM, setDrinkSM] = useState(false);
@@ -26,8 +26,12 @@ function Menupage() {
   const visibleDrinkData = drinkSM ? drinkdata : drinkdata.slice(0, 8);
   const visibleSDData = sdSM ? sddata : sddata.slice(0, 8);
 
+  useEffect(()=>{
+    menuHandler(0)
+  })
+
   return (
-    <div className={`${menubtn ? "block" : "hidden"}`}>
+    <div>
       <p className="text-center text-lg mx-[2vw] md:text-xl lg:text-2xl xl:text-3xl font-bold mt-10 relative z-2">
         Our menu offers a wide range of meals, snacks, drinks, appetizers, and
         more. We are dedicated to ensuring top-quality food and excellent
@@ -72,12 +76,12 @@ function Menupage() {
         />
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
-        <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
+        <div className="flex gap-10 mx-[3vw] justify-between  w-max lg:flex-wrap lg:gap-3 lg:mx-[1vw] xl:gap-5 ">
           {visibleMealData.map((item,index) => (
-            <div className="relative w-45 lg:w-60 xl:w-80" key={index}>
+            <div className="relative w-45 lg:w-[22vw] " key={index}>
               <img
                 loading="lazy"
-                className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
+                className="w-45 h-25 rounded-sm lg:w-[22vw] lg:h-[13vw]  "
                 src={item.image}
                 alt={item.name}
               />
@@ -171,12 +175,12 @@ function Menupage() {
         />
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
-        <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
+        <div className="flex gap-10 mx-[3vw] w-max justify-between lg:flex-wrap lg:gap-3 lg:mx-[1vw] xl:gap-5 ">
           {visibleBAData.map((item,index) => (
-            <div className="relative w-45 lg:w-60 xl:w-80" key={index}>
+            <div className="relative w-45 lg:w-[22vw] " key={index}>
               <img
                 loading="lazy"
-                className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
+                className="w-45 h-25 rounded-sm lg:w-[22vw] lg:h-[13vw] "
                 src={item.image}
                 alt={item.name}
               />
@@ -270,12 +274,12 @@ function Menupage() {
         />
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
-        <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
+        <div className="flex gap-10 mx-[3vw] justify-between  w-max lg:flex-wrap lg:gap-3 lg:mx-[1vw] xl:gap-5 ">
           {visibleDrinkData.map((item, index) => (
-            <div className="relative w-45 lg:w-60 xl:w-80" key={index}>
+            <div className="relative w-45 lg:w-[22vw] " key={index}>
               <img
                 loading="lazy"
-                className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
+                className="w-45 h-25 rounded-sm lg:w-[22vw] lg:h-[13vw]  "
                 src={item.image}
                 alt={item.name}
               />
@@ -369,12 +373,12 @@ function Menupage() {
         />
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
-        <div className="flex gap-10 mx-[3vw] w-max lg:flex-wrap lg:gap-3 lg:mx-[0vw] xl:gap-10 xl:mx-[2vw]">
+        <div className="flex gap-10 mx-[3vw] justify-between  w-max lg:flex-wrap lg:gap-3 lg:mx-[1vw] xl:gap-5 ">
           {visibleSDData.map((item, index) => (
-            <div className="relative w-45 lg:w-60 xl:w-80" key={index}>
+            <div className="relative w-45 lg:w-[22vw] " key={index}>
               <img
                 loading="lazy"
-                className="w-45 h-25 rounded-sm lg:w-60 lg:h-35 xl:w-80 xl:h-45"
+                className="w-45 h-25 rounded-sm lg:w-[22vw] lg:h-[13vw]  "
                 src={item.image}
                 alt={item.name}
               />
@@ -457,7 +461,7 @@ function Menupage() {
         <input
           type="text"
           placeholder="Search for items..."
-          className="border border-gray-300 rounded-md px-3 py-2 w-80 sm:w-96 md:w-[30vw] lg:w-[40vw] xl:w-[50vw]"
+          className="border border-gray-300 rounded-md px-3 py-2 w-80 sm:w-96 md:w-[30vw] lg:w-[22vw] xl:w-[50vw]"
         />
         <button className="ml-2 bg-yellow-700 text-white px-4 py-2 rounded-md hover:bg-yellow-600">
           Search
