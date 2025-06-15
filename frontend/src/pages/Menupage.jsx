@@ -7,11 +7,6 @@ import {
   ChevronLeft,
 } from "lucide-react";
 import data from "../JSON/MonthPick.json";
-import dataFullMeal from "../JSON/FullMeal.json";
-import badata from "../JSON/Breakfast&Appetizers.json";
-import sddata from "../JSON/Sweets&desserts.json";
-import drinkdata from "../JSON/Drinks.json";
-
 import { PageContext } from "../components/PageContext";
 
 function Menupage() {
@@ -21,15 +16,61 @@ function Menupage() {
   const [drinkSM, setDrinkSM] = useState(false);
   const [sdSM, setSDSM] = useState(false);
 
-  const visibleMealData = mealSM ? dataFullMeal : dataFullMeal.slice(0, 8);
-  const visibleBAData = baSM ? badata : badata.slice(0, 8);
-  const visibleDrinkData = drinkSM ? drinkdata : drinkdata.slice(0, 8);
-  const visibleSDData = sdSM ? sddata : sddata.slice(0, 8);
+  let fMealContainer = [];
+  const [fMeal, setFMeal] = useState([]);
+  const [fBadata, setFBadata] = useState([]);
+  const [fDrinkdata, setFDrinkdata] = useState([]);
+  const [fSddata, setFSddata] = useState([]);
+  let fBadataContainer = [];
+  let fDrinkdataContainer = [];
+  let fSddataContainer = [];
+  const [loading, setLoading] = useState(true);
 
-  useEffect(()=>{
+  useEffect(() => {
+    fetch('https://shiny-sniffle-r4grvxgg9rrv2xwww-5000.app.github.dev/menu')
+      .then((res) => res.json())
+      .then((data) => {
+
+        data.forEach((item) => {
+          if (item.id.startsWith("M")) {
+            fMealContainer.push(item);
+          }else if (item.id.startsWith("B")){
+            fBadataContainer.push(item);
+          } else if (item.id.startsWith("D")) {
+            fDrinkdataContainer.push(item);
+          }
+          else if (item.id.startsWith("S")) {
+            fSddataContainer.push(item);
+          }
+        });
+        setLoading(false);
+        setFMeal(fMealContainer);
+        setFBadata(fBadataContainer);
+        setFDrinkdata(fDrinkdataContainer);
+        setFSddata(fSddataContainer);
+      })
+      .catch((err) => {
+        console.error('Error fetching menu:', err);
+        setLoading(false);
+      });
+  }, []);
+
+  const visibleMealData = mealSM ? fMeal : fMeal.slice(0, 8);
+  const visibleBAData = baSM ? fBadata : fBadata.slice(0, 8);
+  const visibleDrinkData = drinkSM ? fDrinkdata : fDrinkdata.slice(0, 8);
+  const visibleSDData = sdSM ? fSddata : fSddata.slice(0, 8);
+
+  useEffect(() => {
     menuHandler(0)
   })
 
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <p className="text-2xl font-bold">Loading...</p>
+      </div>
+    );
+  }
   return (
     <div>
       <p className="text-center text-lg mx-[2vw] md:text-xl lg:text-2xl xl:text-3xl font-bold mt-10 relative z-2">
@@ -76,8 +117,8 @@ function Menupage() {
         />
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
-        <div className="flex gap-10 mx-[3vw] justify-between  w-max lg:flex-wrap lg:gap-3 lg:mx-[1vw] xl:gap-5 ">
-          {visibleMealData.map((item,index) => (
+        <div className="flex gap-10 mx-[3vw]  w-max lg:flex-wrap lg:gap-3 lg:mx-[1vw] xl:gap-5 ">
+          {visibleMealData.map((item, index) => (
             <div className="relative w-45 lg:w-[22vw] " key={index}>
               <img
                 loading="lazy"
@@ -136,9 +177,8 @@ function Menupage() {
           ))}
         </div>
         <div
-          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
-            mealSM ? "hidden" : ""
-          }`}
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${mealSM ? "hidden" : ""
+            }`}
           onClick={() => {
             setMealSM(true);
           }}
@@ -146,9 +186,8 @@ function Menupage() {
           <ChevronRight size={40} />
         </div>
         <div
-          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
-            mealSM ? "" : "hidden"
-          }`}
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${mealSM ? "" : "hidden"
+            }`}
           onClick={() => {
             setMealSM(false);
           }}
@@ -176,7 +215,7 @@ function Menupage() {
       </div>
       <div className="overflow-x-scroll w-full flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
         <div className="flex gap-10 mx-[3vw] w-max justify-between lg:flex-wrap lg:gap-3 lg:mx-[1vw] xl:gap-5 ">
-          {visibleBAData.map((item,index) => (
+          {visibleBAData.map((item, index) => (
             <div className="relative w-45 lg:w-[22vw] " key={index}>
               <img
                 loading="lazy"
@@ -235,9 +274,8 @@ function Menupage() {
           ))}
         </div>
         <div
-          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
-            baSM ? "hidden" : ""
-          }`}
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${baSM ? "hidden" : ""
+            }`}
           onClick={() => {
             setBASM(true);
           }}
@@ -245,9 +283,8 @@ function Menupage() {
           <ChevronRight size={40} />
         </div>
         <div
-          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
-            baSM ? "" : "hidden"
-          }`}
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${baSM ? "" : "hidden"
+            }`}
           onClick={() => {
             setBASM(false);
           }}
@@ -334,9 +371,8 @@ function Menupage() {
           ))}
         </div>
         <div
-          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
-            drinkSM ? "hidden" : ""
-          }`}
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${drinkSM ? "hidden" : ""
+            }`}
           onClick={() => {
             setDrinkSM(true);
           }}
@@ -344,9 +380,8 @@ function Menupage() {
           <ChevronRight size={40} />
         </div>
         <div
-          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
-            drinkSM ? "" : "hidden"
-          }`}
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${drinkSM ? "" : "hidden"
+            }`}
           onClick={() => {
             setDrinkSM(false);
           }}
@@ -433,9 +468,8 @@ function Menupage() {
           ))}
         </div>
         <div
-          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
-            sdSM ? "hidden" : ""
-          }`}
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${sdSM ? "hidden" : ""
+            }`}
           onClick={() => {
             setSDSM(true);
           }}
@@ -443,9 +477,8 @@ function Menupage() {
           <ChevronRight size={40} />
         </div>
         <div
-          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${
-            sdSM ? "" : "hidden"
-          }`}
+          className={`px-1 py-3 hover:bg-gray-300 rounded-sm ${sdSM ? "" : "hidden"
+            }`}
           onClick={() => {
             setSDSM(false);
           }}

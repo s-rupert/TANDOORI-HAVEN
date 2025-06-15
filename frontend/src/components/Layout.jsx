@@ -16,10 +16,12 @@ import {
   Contact,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import Userpage from "../pages/Userpage";
+import Userpage from "../pages/User/Userpage";
+import UserInfo from "../pages/User/UserInfo";
 
 export default function Layout() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [loginStatus, setLoginStatus] = useState(false);
   const {
     menubtn,
     location,
@@ -38,6 +40,13 @@ export default function Layout() {
     setScrollTo(val);
   };
 
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setLoginStatus(true);
+    }
+  }
+  , []);
   return (
     <div
       id="layout"
@@ -121,7 +130,11 @@ export default function Layout() {
               setUserbtn(true);
             }}
           >
-            <UserRound />
+            {loginStatus ? (
+              <UserInfo />
+            ) : (
+              <UserRound />
+            )}
           </div>
           <Link to="/checkout"
             className="text-white  rounded-full flex items-center h-[7vw] text-lg md:text-xs md:text-yellow-700 md:h-[3vw] lg:text-sm xl:h-[2vw]"

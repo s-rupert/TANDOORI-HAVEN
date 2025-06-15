@@ -20,19 +20,21 @@ import Locationpage from "./Locationpage";
 import ReservationPage from "./Reservationpage";
 import AboutPage from "./Aboutpage";
 import ContactPage from "./Contactpage";
-import Userpage from "./Userpage";
 import Review from "./Review";
+import AddtoCart from "../components/AddtoCart"
 
 function Homepage() {
-  const { setScrollTo, menuHandler } = useContext(PageContext);
+  const { setScrollTo, menuHandler, addToCartHandler } = useContext(PageContext);
+  
 
+  
   const scrollToSection = (val) => {
     setScrollTo(val);
   };
-  useEffect(()=>{
+  useEffect(() => {
     menuHandler(10)
   })
-
+  
   return (
     <div>
       <img
@@ -109,7 +111,7 @@ function Homepage() {
       <div className="overflow-x-scroll w-full h-auto flex justify-center items-center lg:overflow-x-hidden lg:w-screen">
         <div className="flex gap-10 mx-[3vw] w-max justify-between lg:flex-wrap lg:gap-3 lg:mx-[1vw] xl:gap-5 ">
           {data.map((item) => (
-            <div className="relative w-45 lg:w-[22vw] " key={item.id}>
+            <div className="relative w-45 lg:w-[22vw] " key={item.id} onClick={() => addToCartHandler(item.id)}>
               <img
                 loading="lazy"
                 className="w-45 h-25 rounded-sm lg:w-[22vw] lg:h-[13vw]"
@@ -180,6 +182,8 @@ function Homepage() {
           <ChevronRight size={40} />
         </Link>
       </div>
+      {/* Add to cart */}
+      <AddtoCart />
       {/* Reservation */}
       <div className="flex justify-between w-screen items-center overflow-hidden mt-10 lg:h-[10vw]">
         <img

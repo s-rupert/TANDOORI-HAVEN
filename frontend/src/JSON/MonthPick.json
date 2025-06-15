@@ -1,58 +1,66 @@
 [
   {
     "name": "Tandoori Chicken",
-    "price": 16.99,
-    "rating": 4.5,
+    "price": 11.63,
+    "rating": 4.4,
     "ingredients": "Chicken, yogurt, ginger-garlic paste, red chili powder, garam masala, lemon juice, mustard oil",
-    "image": "/mealimg/tandoori_chicken.jpg"
+    "image": "/mealimg/tandoori_chicken.jpg",
+    "id":"M1"
   },
   {
     "name": "Paneer Tikka (Tandoori)",
-    "price": 14.99,
-    "rating": 4.4,
+    "price": 13.45,
+    "rating": 4.6,
     "ingredients": "Paneer cubes, yogurt, turmeric, red chili, chaat masala, bell peppers, onions",
-    "image": "/mealimg/paneer_tikka.jpg"
+    "image": "/mealimg/paneer_tikka.jpg",
+    "id":"M2"
   },
   {
     "name": "Butter Chicken",
-    "price": 14.99,
-    "rating": 4.7,
+    "price": 15.86,
+    "rating": 4.3,
     "ingredients": "Chicken, butter, cream, tomatoes, cashew paste, ginger-garlic, fenugreek leaves, spices",
-    "image": "/mealimg/butter_chicken.jpg"
+    "image": "/mealimg/butter_chicken.jpg",
+    "id":"M3"
   },
   {
     "name": "Masala Dosa",
-    "price": 10.99,
-    "rating": 4.3,
+    "price": 13.92,
+    "rating": 4.2,
     "ingredients": "Fermented rice and urad dal batter, mashed spiced potatoes, mustard seeds, curry leaves",
-    "image": "/mealimg/masala_dosa.jpg"
+    "image": "/mealimg/masala_dosa.jpg",
+    "id":"M4"
   },
   {
     "name": "Biryani (Hyderabadi Mutton)",
-    "price": 12.99,
-    "rating": 4.6,
+    "price": 12.01,
+    "rating": 4.4,
     "ingredients": "Basmati rice, marinated mutton, saffron, fried onions, mint, yogurt, garam masala",
-    "image": "/mealimg/mutton_biryani.jpg"
+    "image": "/mealimg/mutton_biryani.jpg",
+    "id":"M5"
   },
   {
     "name": "Chole Bhature",
-    "price": 10.99,
-    "rating": 4.2,
+    "price": 9.67,
+    "rating": 4.4,
     "ingredients": "Chickpeas, tomatoes, onions, ginger, spices, bhature (fried bread)",
-    "image": "/mealimg/chole_bhature.jpg"
+    "image": "/mealimg/chole_bhature.jpg",
+    "id":"M6"
   },
   {
     "name": "Rogan Josh",
-    "price": 8.49,
-    "rating": 4.5,
+    "price": 8.95,
+    "rating": 4.3,
     "ingredients": "Lamb, yogurt, Kashmiri red chili, fennel seeds, dry ginger, cardamom, cinnamon",
-    "image": "/mealimg/rogan_josh.jpg"
+    "image": "/mealimg/rogan_josh.jpg",
+    "id":"M7"
   },
   {
     "name": "Palak Paneer",
-    "price": 7.99,
-    "rating": 4.4,
+    "price": 9.88,
+    "rating": 4.2,
     "ingredients": "Spinach puree, paneer cubes, garlic, green chilies, cream, cumin, garam masala",
-    "image": "/mealimg/palak_paneer.jpg"
+    "image": "/mealimg/palak_paneer.jpg",
+    "id":"M8"
   }
 ]

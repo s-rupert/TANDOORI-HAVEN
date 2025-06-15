@@ -1,18 +1,79 @@
 import React, { useState, useContext, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import { X } from "lucide-react";
 
-import { PageContext } from "../components/PageContext";
+import { PageContext } from '../../components/PageContext';
 
 const Userpage = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [sAttempt, setSattempt] = useState(true);
-  const { userbtn, setUserbtn } = useContext(PageContext);
+  const { userbtn, setUserbtn, user, setUser } = useContext(PageContext);
+  const [badResponse, setBadResponse] = useState("");
+
+  const [email, setEmail] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  const submitRegisterHandler = async (e) => {
+    e.preventDefault();
+    const newUser = {
+      fullname: fullName,
+      email: email,
+      password: password,
+    };
+
+    try {
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/register`, newUser);
+
+      if (response.status === 201) {
+        const data = response.data;
+        setUser(data.user);
+        localStorage.setItem("token", data.token);
+        setSattempt(false);
+      }
+    } catch (error) {
+      console.error("Registration failed:", error);
+      setBadResponse("User already exists. Please sign in.");
+
+      setFullName("");
+      setEmail("");
+      setPassword("");
+    }
+  };
+
+  const submitLoginHandler = async (e) => {
+    e.preventDefault();
+    const newUser = {
+      email: email,
+      password: password,
+    };
+
+    try {
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/login`, newUser);
+
+      if (response.status === 201) {
+        const data = response.data;
+        setUser(data.user);
+        localStorage.setItem("token", data.token);
+        setSattempt(false);
+      }
+    } catch (error) {
+      console.error("Registration failed:", error);
+      setBadResponse("Invalid email or password. Please try again.");
+
+      setFullName("");
+      setEmail("");
+      setPassword("");
+    }
+  };
 
   return (
     <div
-      className={`fixed inset-0 flex items-center justify-center w-full h-full z-20 bg-gray-100/50 overflow-hidden ${
-        userbtn ? "" : "hidden"
-      }`}
+      className={`fixed inset-0 flex items-center justify-center w-full h-full z-20 bg-gray-100/50 overflow-hidden ${userbtn ? "" : "hidden"
+        }`}
     >
       <div className="flex flex-col items-center justify-center gap-6 bg-yellow-600 p-10 rounded-xl text-center shadow-2xl w-96 relative">
         <X
@@ -36,9 +97,8 @@ const Userpage = () => {
         <div className={`${sAttempt ? "" : "hidden"}`}>
           {/* Login Form */}
           <div
-            className={`w-full text-left text-white space-y-4 ${
-              isLogin ? "" : "hidden"
-            }`}
+            className={`w-full text-left text-white space-y-4 ${isLogin ? "" : "hidden"
+              }`}
           >
             <div>
               <label className="block mb-1 font-medium">Email</label>
@@ -64,11 +124,13 @@ const Userpage = () => {
 
             <button
               className="w-full py-2 mt-2 bg-white text-yellow-700 font-semibold rounded-md hover:bg-gray-100 transition"
-              onClick={() => setSattempt(false)}
+              onClick={() => submitLoginHandler(event)}
             >
               Login
             </button>
-
+            <p className={`text-black text-center text-sm mt-2 ${badResponse ? "" : "hidden"}`}>
+              {badResponse}
+            </p>
             <p className="text-center text-sm mt-4">
               Don't have an account?{" "}
               <span
@@ -81,13 +143,14 @@ const Userpage = () => {
           </div>
           {/* Register Form */}
           <div
-            className={`w-full text-left text-white space-y-4 ${
-              isLogin ? "hidden" : ""
-            }`}
+            className={`w-full text-left text-white space-y-4 ${isLogin ? "hidden" : ""
+              }`}
           >
             <div>
               <label className="block mb-1 font-medium">Email</label>
               <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 type="text"
                 placeholder="Enter your email"
                 className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-white border-2 border-white rounded-md"
@@ -96,6 +159,8 @@ const Userpage = () => {
             <div>
               <label className="block mb-1 font-medium">Fullname</label>
               <input
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
                 type="text"
                 placeholder="Enter your fullname"
                 className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-white border-2 border-white rounded-md"
@@ -105,6 +170,8 @@ const Userpage = () => {
             <div>
               <label className="block mb-1 font-medium">Password</label>
               <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 placeholder="Enter your password"
                 className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-white border-2 border-white rounded-md"
@@ -113,11 +180,13 @@ const Userpage = () => {
 
             <button
               className="w-full py-2 mt-2 bg-white text-yellow-700 font-semibold rounded-md hover:bg-gray-100 transition"
-              onClick={() => setSattempt(false)}
+              onClick={() => submitRegisterHandler(event)}
             >
               Register
             </button>
-
+            <p className={`text-black text-center text-sm mt-2 ${badResponse ? "" : "hidden"}`}>
+              {badResponse}
+            </p>
             <p className="text-center text-sm mt-4">
               Already have an account?{" "}
               <span
@@ -133,7 +202,7 @@ const Userpage = () => {
           <div className={`${isLogin ? "" : "hidden"}`}>
             <p className="text-lg text-white font-bold">Successfully Login</p>
             <p className="text-2xl text-white font-bold mt-5">
-              Welcome Back <span>Name!</span>
+              Welcome Back <span>{fullName}!</span>
             </p>
           </div>
           <div className={`${isLogin ? "hidden" : ""}`}>
@@ -142,7 +211,7 @@ const Userpage = () => {
               successfully Created.
             </p>
             <p className="text-xl text-white font-bold mt-5">
-              Welcome to Tandoori Haven!
+              Welcome to Tandoori Haven <span>{fullName}!</span>
             </p>
           </div>
         </div>
