@@ -1,55 +1,32 @@
-import React, { useState } from 'react';
+const dotenv = require('dotenv');
+dotenv.config();
+const express = require('express');
+const cors = require('cors');
+const app = express();
+const connectToDb = require('./db/db');
+const insertMenuData = require('./db/datainsertion');
+const menuoptions = require('./models/menuItems');
+const userRoutes = require('./routes/user.route');
 
-function App() {
-  const [placeId, setPlaceId] = useState('ChIJRVzuGIY7K4gRMbwT_By9xDQ');
-  const [reviews, setReviews] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+connectToDb();
 
-  const fetchReviews = async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const res = await fetch(`http://localhost:5000/api/reviews/${placeId}`);
-      if (!res.ok) {
-        throw new Error('Failed to fetch reviews');
-      }
-      const data = await res.json();
-      setReviews(data);
-    } catch (err) {
-      setError(err.message);
-    }
-    setLoading(false);
-  };
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-  return (
-    <div style={{ padding: '20px' }}>
-      <h1>Google Place Reviews</h1>
-      <input
-        type="text"
-        placeholder="Enter Place ID"
-        value={placeId}
-        onChange={(e) => setPlaceId(e.target.value)}
-        style={{ width: '300px' }}
-      />
-      <button onClick={fetchReviews} disabled={!placeId}>
-        Get Reviews
-      </button>
 
-      {loading && <p>Loading...</p>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+app.get('/menu', async (req, res) => {
+  try {
+    const items = await menuoptions.find();
+    res.json(items);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch menu items' });
+  }
+});
 
-      {reviews.length > 0 && (
-        <ul>
-          {reviews.map((r, i) => (
-            <li key={i}>
-              <strong>{r.author_name}</strong> ({r.rating}⭐): {r.text}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-}
+app.get('/', (req, res) => {
+  res.send('Welcome to Tandoori Haven!');
+});
+app.use('/users', userRoutes);
 
-export default App;
+module.exports = app;
