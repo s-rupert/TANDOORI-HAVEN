@@ -50,11 +50,11 @@ const Userpage = () => {
       email: email,
       password: password,
     };
-
+    
     try {
       const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/login`, newUser);
-
-      if (response.status === 201) {
+      
+      if (response.status === 200) {
         const data = response.data;
         setUser(data.user);
         localStorage.setItem("token", data.token);
@@ -64,7 +64,6 @@ const Userpage = () => {
       console.error("Registration failed:", error);
       setBadResponse("Invalid email or password. Please try again.");
 
-      setFullName("");
       setEmail("");
       setPassword("");
     }
@@ -82,6 +81,7 @@ const Userpage = () => {
             setUserbtn(false);
             setIsLogin(true);
             setSattempt(true);
+            window.location.reload();
           }}
         />
 
@@ -103,6 +103,8 @@ const Userpage = () => {
             <div>
               <label className="block mb-1 font-medium">Email</label>
               <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 type="text"
                 placeholder="Enter your email"
                 className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-white border-2 border-white rounded-md"
@@ -112,6 +114,8 @@ const Userpage = () => {
             <div>
               <label className="block mb-1 font-medium">Password</label>
               <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 placeholder="Enter your password"
                 className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-white border-2 border-white rounded-md"

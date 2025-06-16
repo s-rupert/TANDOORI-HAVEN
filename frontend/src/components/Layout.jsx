@@ -46,13 +46,12 @@ export default function Layout() {
       setLoginStatus(true);
     }
   }
-  , []);
+    , []);
   return (
     <div
       id="layout"
-      className={`bg-amber-50 h-[100vh] w-screen relative overflow-x-hidden ${
-        userbtn ? "overflow-hidden" : ""
-      }`}
+      className={`bg-amber-50 h-[100vh] w-screen relative overflow-x-hidden ${userbtn ? "overflow-hidden" : ""
+        }`}
     >
       {/* Header */}
       <div className="flex justify-between h-35 p-2 h-auto md:relative md:z-10">
@@ -72,11 +71,10 @@ export default function Layout() {
           <Menu size={30} />
         </div>
         <div
-          className={`md:flex md:gap-[1vw] md:mt-[3vw] xl:mt-[2vw] ${
-            menuOpen
+          className={`md:flex md:gap-[1vw] md:mt-[3vw] xl:mt-[2vw] ${menuOpen
               ? "fixed flex w-[50%] flex-col bg-yellow-700 h-[100vh] right-0 top-0 gap-3 z-10 items-center pt-10"
               : "hidden"
-          }`}
+            }`}
         >
           <div
             className="absolute top-2 left-2 md:hidden"
@@ -86,59 +84,53 @@ export default function Layout() {
           </div>
           <Link
             to="/menu"
-            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${
-              menubtn ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
-            }`}
+            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${menubtn ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
+              }`}
           >
             Menu
           </Link>
           <Link
             to="/locations"
-            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${
-              location ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
-            }`}
+            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${location ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
+              }`}
           >
             Location
           </Link>
           <Link
             to="/reservation"
-            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${
-              reservation ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
-            }`}
+            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${reservation ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
+              }`}
           >
             Online Reservation
           </Link>
           <Link
             to="/about_us"
-            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${
-              about ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
-            }`}
+            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${about ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
+              }`}
           >
             About Us
           </Link>
           <Link
             to="/contact"
-            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${
-              contact ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
-            }`}
+            className={`text-white px-[1vw] bg-yellow-700 rounded-md flex items-center h-[7vw] text-lg md:text-xs md:h-[3vw] lg:text-sm xl:h-[2vw] ${contact ? "mt-5 md:text-xl text-xl lg:text-xl xl:text-xl" : ""
+              }`}
           >
             Contact
           </Link>
           <div
             className="text-white rounded-full flex items-center h-[7vw] text-lg md:text-xs md:text-yellow-700 md:h-[3vw] lg:text-sm xl:h-[2vw]"
-            onClick={() => {
-              setUserbtn(true);
-            }}
           >
             {loginStatus ? (
               <UserInfo />
             ) : (
-              <UserRound />
+              <UserRound onClick={() => {
+                setUserbtn(true);
+              }} />
             )}
           </div>
           <Link to="/checkout"
             className="text-white  rounded-full flex items-center h-[7vw] text-lg md:text-xs md:text-yellow-700 md:h-[3vw] lg:text-sm xl:h-[2vw]"
-            onClick={() => {}}
+            onClick={() => { }}
           >
             <ShoppingCart />
           </Link>

@@ -3,6 +3,7 @@ dotenv.config();
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const cookieParser = require('cookie-parser');
 const connectToDb = require('./db/db');
 const insertMenuData = require('./db/datainsertion');
 const menuoptions = require('./models/menuItems');
@@ -12,6 +13,7 @@ connectToDb();
 
 app.use(cors());
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
 

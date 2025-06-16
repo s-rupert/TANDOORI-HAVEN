@@ -27,7 +27,7 @@ function Menupage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://shiny-sniffle-r4grvxgg9rrv2xwww-5000.app.github.dev/menu')
+    fetch(`${import.meta.env.VITE_BASE_URL}/menu`)
       .then((res) => res.json())
       .then((data) => {
 
