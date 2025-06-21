@@ -9,17 +9,22 @@ router.post('/register', [
     body('email').isEmail().withMessage('Please enter a valid email address'),
     body('fullname').isLength({ min: 3 }).withMessage('name must be at least 3 characters'),
     body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters')
-], 
-userController.registerUser
+],
+    userController.registerUser
 )
 
 router.post('/login', [
     body('email').isEmail().withMessage('Please enter a valid email address'),
     body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters')
 ],
-userController.loginUser)
+    userController.loginUser)
 
 router.get('/profile', authMiddleware.authUser, userController.getUserProfile)
+
+router.get('/profile/update', [
+    body('fullname').isLength({ min: 3 }).withMessage('name must be at least 3 characters'),
+    body('address').isLength( { min: 5 }).withMessage('Address must be atleast 5 characters')
+], authMiddleware.authUser, userController.editProfile)
 
 router.get('/logout', authMiddleware.authUser, userController.logoutUser)
 

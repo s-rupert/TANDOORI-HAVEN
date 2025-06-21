@@ -19,11 +19,10 @@ export const PageProvider = ({ children }) => {
   const locOakvilleRef =useRef(null);
   const locScarboroughRef =useRef(null);
   const contactRef = useRef(null);
-  const [toCart, setToCart] = useState(false);
-  const [idNum, setIdNum] = useState("");
   const [user, setUser] = useState({
     fullname: "",
-    email: ""
+    email: "",
+    address:""
   });
 
   const menuHandler = (num) => {
@@ -79,10 +78,7 @@ export const PageProvider = ({ children }) => {
     }
   };
 
-  const addToCartHandler = (val) => {
-    setIdNum(val)
-    setToCart(true)
-  }
+ 
 
   return (
     <PageContext.Provider
@@ -110,11 +106,6 @@ export const PageProvider = ({ children }) => {
         locOakvilleRef,
         locScarboroughRef,
         contactRef,
-        toCart,
-        setToCart,
-        addToCartHandler,
-        idNum,
-        setIdNum,
         user,
         setUser
       }}

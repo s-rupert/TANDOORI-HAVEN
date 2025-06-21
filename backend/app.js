@@ -8,6 +8,7 @@ const connectToDb = require('./db/db');
 const insertMenuData = require('./db/datainsertion');
 const menuoptions = require('./models/menuItems');
 const userRoutes = require('./routes/user.route');
+const orderRoutes = require('./routes/order.route')
 
 connectToDb();
 

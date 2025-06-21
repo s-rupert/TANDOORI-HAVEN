@@ -4,7 +4,7 @@ const { validationResult } = require('express-validator');
 const blacklistTokenModel = require('../models/blackListToken.Model');
 
 
-module.exports.registerUser = async (req, res, next) => {  
+module.exports.registerUser = async (req, res, next) => {
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -13,7 +13,7 @@ module.exports.registerUser = async (req, res, next) => {
         });
     }
 
-    
+
     const { fullname, email, password } = req.body;
 
     const isUserAlreadyExist = await userModel.findOne({
@@ -33,7 +33,7 @@ module.exports.registerUser = async (req, res, next) => {
 
     const token = user.generateAuthToken();
 
-    res.status(201).json({token, user});
+    res.status(201).json({ token, user });
 }
 
 module.exports.loginUser = async (req, res, next) => {
@@ -59,18 +59,41 @@ module.exports.loginUser = async (req, res, next) => {
 
     const token = user.generateAuthToken();
     res.cookie('token', token);
-    res.status(200).json({token, user});
+    res.status(200).json({ token, user });
 }
 
 module.exports.getUserProfile = async (req, res, next) => {
-
     res.status(200).json(req.user);
 }
 
+module.exports.editProfile = async (req, res, next) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({
+            errors: errors.array()
+        });
+    }
+    const { fullname, address } = req.body;
+    const updatedUser = await User.findByIdAndUpdate(
+        req.params.id, {
+        $set: {
+            fullname,
+            address
+        }
+    },
+        { new: true }
+    );
+
+    if (!updatedUser) return res.status(404).send("User not found");
+
+    res.json(updatedUser);
+    res.status(200).json({ token, user });
+}
+
 module.exports.logoutUser = async (req, res, next) => {
-    const token = req.cookies.token || req.headers.authorization.split(' ')[1];
+    const token = req.headers.authorization.split(' ')[1];
     await blacklistTokenModel.create({ token });
-    
+
     res.clearCookie('token');
 
     res.status(200).json({ message: 'Logged out successfully' });

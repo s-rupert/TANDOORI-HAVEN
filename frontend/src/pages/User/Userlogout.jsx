@@ -10,7 +10,6 @@ export const UserLogout = () => {
     if (!token) {
       return;
     }
-    console.log("hi")
     axios
       .get(`${import.meta.env.VITE_BASE_URL}/users/logout`, {
         headers: {
@@ -21,13 +20,11 @@ export const UserLogout = () => {
         if (response.status === 200) {
           localStorage.removeItem("token");
         }
-        console.log("this: response",response)
-
       })
       .catch((error) => {
         console.error("Logout failed:", error);
       });
-  }, []); // 🔹 Runs only once when component mounts
+  }, []);
 
   return <div>Logging out...</div>;
 };

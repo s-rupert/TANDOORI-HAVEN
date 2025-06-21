@@ -24,17 +24,22 @@ import Review from "./Review";
 import AddtoCart from "../components/AddtoCart"
 
 function Homepage() {
-  const { setScrollTo, menuHandler, addToCartHandler } = useContext(PageContext);
-  
+  const { setScrollTo, menuHandler } = useContext(PageContext);
+  const [itemIndex, setItemIndex] = useState('')
+  const [toCart, setToCart] = useState(false)
 
-  
+  const addToCartHandler = (val) => {
+    setItemIndex(val)
+    setToCart(true)
+  }
+
   const scrollToSection = (val) => {
     setScrollTo(val);
   };
   useEffect(() => {
     menuHandler(10)
   })
-  
+
   return (
     <div>
       <img
@@ -183,7 +188,7 @@ function Homepage() {
         </Link>
       </div>
       {/* Add to cart */}
-      <AddtoCart />
+      <AddtoCart itemIndex={itemIndex} setItemIndex= {setItemIndex} setToCart={setToCart} toCart={toCart} />
       {/* Reservation */}
       <div className="flex justify-between w-screen items-center overflow-hidden mt-10 lg:h-[10vw]">
         <img

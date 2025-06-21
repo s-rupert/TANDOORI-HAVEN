@@ -50,10 +50,10 @@ const Userpage = () => {
       email: email,
       password: password,
     };
-    
+
     try {
       const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/login`, newUser);
-      
+
       if (response.status === 200) {
         const data = response.data;
         setUser(data.user);
@@ -139,7 +139,10 @@ const Userpage = () => {
               Don't have an account?{" "}
               <span
                 className="underline font-semibold cursor-pointer hover:text-white"
-                onClick={() => setIsLogin(false)}
+                onClick={() => {
+                  setIsLogin(false)
+                  setBadResponse("")
+                }}
               >
                 Sign up
               </span>
@@ -195,7 +198,10 @@ const Userpage = () => {
               Already have an account?{" "}
               <span
                 className="underline font-semibold cursor-pointer hover:text-white"
-                onClick={() => setIsLogin(true)}
+                onClick={() => {
+                  setIsLogin(true)
+                  setBadResponse("")
+                }}
               >
                 Sign in
               </span>
